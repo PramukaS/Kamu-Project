@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>User Registration</title>
-  <link rel="stylesheet" type="text/css" href="loginstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/loginstyle.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
 </head>

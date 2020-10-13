@@ -2,18 +2,39 @@
 body{
 	font-family: 'Quicksand', sans-serif;
 	margin: 0;
+	background-size: 100%
 
+}
+
+.container{
+    min-height: 100%;  
+}
+
+.main{
+    overflow: auto;   
 }
 
 .topnav{
     overflow: hidden; 
     width: 100%;
     position: fixed;
-    top: 0;
+    top: 0%;
+    padding-bottom: 10px;
+    background-color: white;
+    transition: top 0.3s;
+    z-index: 1;
+}
+
+/*.topnavi{
+    overflow: hidden; 
+    width: 100%;
+    position: absolute;
+    top: 1%;
     padding-bottom: 15px;
     background-color: white;
     transition: top 0.3s;
-}
+}*/
+
 .button{
     padding-top: 50px ;
     padding-left: 70px;
@@ -24,7 +45,7 @@ body{
 }
 .topnav ul li a {
     float: right;
-    color:black;
+    color: black;
     text-align: center;
     padding: 20px 40px;
     text-decoration: black;
@@ -48,13 +69,42 @@ body{
     opacity: 0.6;
 }
 
+/*.topnavi ul li{
+    padding: 0px 50px;
+}
+.topnavi ul li a {
+    float: right;
+    color:black;
+    text-align: center;
+    padding: 20px 40px;
+    text-decoration: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.topnavi ul li a:hover {
+   color: red;
+}
+
+.topnavi ul li a#login{
+    color: white;
+    font-size: 18px;
+    background-color: black;
+    border-radius: 100px;
+}
+
+.topnavi ul li a#login:hover{
+    opacity: 0.6;
+}*/
+
 
 img#logo{  
     width:120px;
     height:60px;
     position: absolute; 
     padding: 10px 50px;
-	top:0; 
+	top:2%; 
 	left:0; 
 }
 
@@ -65,6 +115,14 @@ img#logo{
     padding: 0px;
     display:block;
 
+}
+
+.bgc{
+    margin-top: 90px;
+    height: 1000px;
+    background-color:#8EE4AF ;
+    padding: 0px;
+    display:block;
 }
 
 .head{
@@ -116,32 +174,21 @@ img#logo{
  	position: relative;
  	float: right;
  	display: inline-block;
- 	top: 54%;
- 	left: 15%;
- 	transform: translate(-50%, -50%);
+ 	top: 25%;
+ 	left: -50%;
+ 	transform: translate(-10%, -10%);
  	color: #fff;
 }
 
 .banner-textleft{
-	height: 500px;
  	position: relative;
  	float: left;
  	display: inline-block;
- 	top: 50%;
+ 	top: 4%;
  	left: 15%;
  	transform: translate(-30%, -50%);
  	color: #fff;
-}
-
-.banner-textright{
-	height: 500px;
- 	position: relative;
- 	float: right;
- 	display: inline-block;
- 	top: 50%;
- 	left: 15%;
- 	transform: translate(-50%, -50%);
- 	color: #fff;
+    z-index: 0;
 }
 
 .icon{
@@ -149,9 +196,10 @@ img#logo{
  	left: 5%;
  	top: 6%;
  	float: left;
- 	display: inline-block;
+ 	display: block;
  	width: 450px;
  	height: 450px;
+    z-index: 0;
 }
 .banner-text h2{
  	font-family: 'Quicksand', sans-serif;
@@ -167,6 +215,7 @@ img#logo{
  	font-size: 50px;
  	color: #000;
  	text-align: center;
+ 	position: fixed;
  }
 
 .banner-textleft p{
@@ -196,6 +245,7 @@ form {
 	background: #fff;
 	opacity: 0.9;
 	border-radius: 15px;
+	position: fixed;
 }
 
 input {
@@ -234,8 +284,8 @@ button:hover{
    color: #A91111;
    padding: 10px;
    width: 95%;
-   border-radius: 5px;
-   margin: 20px auto;
+   border-radius: 10px;
+   margin: 10px auto;
 }
 
 .success {
@@ -243,7 +293,7 @@ button:hover{
    color: #40754C;
    padding: 10px;
    width: 95%;
-   border-radius: 5px;
+   border-radius: 10px;
    margin: 20px auto;
 }
 
@@ -262,55 +312,14 @@ button:hover{
 .footer{
     background: black;
     color: white;
-    height: 50px;
+    height: 60px;
     position: relative;
     border: none;
 }
-/*Admin Panel CSS Starts from here */
 
-@media (max-width: 952px){
-	label.logo{
-		font-size: 30px;
-		padding-left: 50px;
-	}
-	nav ul li a{
-		font-size: 16px;
-
-	}
+.footer a img{
+    width: 40px;
+    height: 40px;
+    margin: 10px 140px;
+    float: left;
 }
-
-@media (max-width: 858px){
-	.checkbtn{
-		display: block;
-	}
-	ul{
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		background: #2c3e50;
-		top:80px;
-		left: -100%;
-		text-align: center;
-		transition: all .5s;
-		
-	}
-	nav ul li{
-		display: block;
-		margin: 50px 0;
-		line-height: 30px;
-	}
-	nav ul li a{
-		font-size: 20px;
-	}
-
-	a:hover,a.active{
-		background: none;
-		color: #0082a6;
-	}
-	#check:checked ~ ul{
-		left: 0;
-	}
-}
-
-
-

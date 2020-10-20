@@ -12,7 +12,7 @@
         <div class="topnav">
             <ul type="none">
                 <li><a id="login" href="login.php">Login</a></li>
-                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="#">About Us</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Restaurants</a></li>
             </ul>

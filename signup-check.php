@@ -81,7 +81,8 @@ if (isset($_POST['name']) && isset($_POST['username']) && isset($_POST['address'
 	        exit();
 		}else {
            $sql2 = "INSERT INTO accounts(username,password,usertype) VALUES('$username', '$password', 'reguser')";
-           $sql3 = "INSERT INTO registered_users(name,username,address,age,gender,height,weight,bmi,password) VALUES('$name', '$username', '$address', '$age', '$gender', '$height', '$weight', '$bmi', '$password')";
+           $sql3 = "INSERT INTO registered_users(name,username,address,age,gender,height,weight,bmi,password) 
+           			VALUES('$name', '$username', '$address', '$age', '$gender', '$height', '$weight', '$bmi', '$password')";
            $result2 = mysqli_query($conn, $sql2);
            $result3 = mysqli_query($conn, $sql3);
            if ($result2 && $result3) {

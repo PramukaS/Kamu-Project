@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="loginstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
 </head>
@@ -10,7 +10,6 @@
 		<div class="container">
 			<div class="topnav">
 	            <ul type="none">
-	                <!--<li><a id="login" href="login.php">Login</a></li>-->
 	                <li><a href="">About Us</a></li>
 	                <li><a href="">Blog</a></li>
 	                <li><a href="">Restaurants</a></li>
@@ -28,7 +27,7 @@
 		        	<div class="banner-text">
 					<form action="loginvalid.php" method="post">
 						<div class="head">
-							<img class="logo" src="logo.png">
+							<img class="logo" src="images/logo.png">
 							<h2 class="title">Login</h2>
 						</div>
 						
@@ -40,7 +39,8 @@
 						<label>Password</label>
 						<input type="password" name="password" placeholder="Password"><br>
 						<button type="submit">Login</button>
-		          		<a href="signupuser.php" class="ca">Create an account</a>
+		          		<a href="signupuser.php" class="ca">Want to create an account?</a><br>
+		          		<a href="recoverpass.php" class="ca">Forgot password?</a>
 					</form>
 				</div>
 	        </div>

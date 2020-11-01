@@ -21,6 +21,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         header("Location: login.php?error=Password is required");
 	    exit();
 	}else{
+		
 		// hashing the password
         $password = md5($password);
 
@@ -28,25 +29,43 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 		$sql = "SELECT * FROM accounts WHERE username='$username' AND password='$password'";
 		$result = mysqli_query($conn, $sql);
 
-		if (mysqli_num_rows($result) === 1) {
-			$row = mysqli_fetch_assoc($result);
-            if ($row['username'] === $username && $row['password'] === $password) {
-            	$_SESSION['username'] = $row['username'];
-            	$_SESSION['name'] = $row['name'];
-            	$_SESSION['id'] = $row['id'];
-        	 	header("Location: home.php");
-		        exit();
-            }else{
-				header("Location: login.php?error=Incorrect Username or password");
-		        exit();
+
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result))
+			{
+				if($row["usertype"] == "admin")
+				{
+					$_SESSION['AdminUser'] = $row["username"];
+					header('Location: admin.php');
+				}
+				else if ($row["usertype"] == "nutrition") 
+				{
+					$_SESSION['NutritionistUser'] = $row["username"];
+					header('Location: nutritionist.php');
+				}
+				else if ($row["usertype"] == "seller") 
+				{
+					$_SESSION['SellerUser'] = $row["username"];
+					header('Location: seller.php');
+				}
+				else if ($row["usertype"] == "delivery") 
+				{
+					$_SESSION['DeliveryUser'] = $row["username"];
+					header('Location: delivery.php');
+				}
+				else
+				{
+					$_SESSION['registereduser'] = $row["username"];
+					header('Location: home.php');
+				}
+
 			}
 		}else{
 			header("Location: login.php?error=Incorrect Username or password");
 	        exit();
 		}
-	}
-	
-}else{
+	}}
+	else{
 	header("Location: login.php");
 	exit();
 }

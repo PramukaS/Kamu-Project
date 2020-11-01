@@ -29,7 +29,7 @@
                         
                         <form action="signup-check.php" method="post">
                             <div class="head">
-                                <img class="logo" src="logo.png">
+                                <img class="logo" src="images/logo.png">
                                 <h2 class="title">Signup</h2>
                             </div>
                         

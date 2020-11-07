@@ -10,6 +10,113 @@ body {
     font-size:13px;
 }
 
+.table{
+    align-content: center;
+    border-color: #252f38;
+    background-color: #6f6f6f;
+    width: 750px; 
+    line-height: 30px;
+    color: #fff;
+    border-width: 1px;
+}
+
+.tableview{
+    display: inline-block;
+    float: left;
+}
+
+.tablebutton{
+  display: inline-block;
+  align-content: center;
+  border: 2px solid;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  min-width: 80px
+  color: black;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.userform{
+   display: inline-block;
+   align-content: center;
+   float: right; 
+}
+
+.userform label{
+    margin: 20px;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+#add{
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-left: 12px;
+  min-width: 80px;
+  color: black;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 25px;
+  border-color: #4CAF50;
+}
+
+table tr td a#update{
+    display: inline-block;
+    float: left;
+    border: 1px solid white;
+    border-color: #ff9800;
+    border-radius: 20px;
+    margin: 5px;
+    margin-left: 5px;
+    min-width: 80px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+table tr td a#delete{
+    display: inline-block;
+    float: right;
+    border: 1px solid white;
+    border-color: #f44336;
+    border-radius: 20px;
+    margin: 5px;
+    margin-left: 5px;
+    padding: 0px;
+    min-width: 80px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+
+#add:hover{
+    background-color: #4CAF50;
+}
+
+#update:hover{
+    background-color: #ff9800;
+}
+
+#delete:hover{
+    background-color: #f44336;
+}
+
+td{
+    text-align: center;
+}
+
+.kamucalendar{
+    display: inline-block;
+    float: left;
+}
+
 ul li {
     list-style: none;
 }
@@ -27,6 +134,7 @@ a, a:hover, a:focus {
     background: #4ECDC4;
     color: #fff;
 }
+
 
 #container {
     width: 100%;
@@ -194,11 +302,11 @@ hr {
 /*Theme Colors Configuration*/
 
 .label-theme {
-	background-color: #4ECDC4;
+	background-color: #0af14a;
 }
 
 .bg-theme {
-	background-color: #4ECDC4;
+	background-color: #0af14a;
 }
 
 ul.top-menu > li > .logout {
@@ -206,10 +314,10 @@ ul.top-menu > li > .logout {
 	font-size: 12px;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
-	border: 1px solid #64c3c2 !important;
+	border: 1px solid #C14D47 !important;
 	padding: 5px 15px;
 	margin-right: 15px;
-	background: #4ECDC4;
+	background: #C14D47;
 	margin-top: 10px;
 }
 
@@ -220,7 +328,7 @@ ul.top-menu > li > .logout {
     width: 210px;
     height: 100%;
     position: fixed;
-    background: #2f323a;
+    background: #454C4E;
 }
 
 #sidebar h5 {
@@ -283,7 +391,7 @@ ul.sidebar-menu {
 }
 
 ul.sidebar-menu li ul.sub li{
-    background: #2f323a;
+    background:  #9463f7;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -313,7 +421,7 @@ ul.sidebar-menu li ul.sub li a:hover {
 }
 
 ul.sidebar-menu li ul.sub li.active a {
-    color: #4ECDC4;
+    color: #C14D47;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -352,7 +460,7 @@ ul.sidebar-menu li a{
 }
 
 ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: #4ECDC4;
+    background: #C14D47;
     color: #fff;
     display: block;
 
@@ -401,7 +509,7 @@ ul.sidebar-menu li a.active i {
 }
 
 .black-bg {
-    background: #22242a;
+    background: #454C4E;
     border-bottom: 1px solid #393d46;
 }
 
@@ -433,7 +541,7 @@ a.logo:hover, a.logo:focus {
 }
 
 a.logo span {
-    color: #4ECDC4;
+    color: #C14D47;
 }
 
 
@@ -511,7 +619,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .dropdown-menu.extended li p.green {
-    background-color: #4ECDC4;
+    background-color: #526069;
     color: #fff;
 }
 
@@ -819,7 +927,7 @@ ul li {
 }
 
 .badge.bg-warning {
-    background: #FCB322;
+    background: #ffcc02;
 }
 
 .badge.bg-important {

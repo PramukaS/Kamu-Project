@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Admin Inbox</title>
+	<title>Manage Posts</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="css/adminstyle2.css">
@@ -237,7 +237,7 @@
               </a>
           </li>
           <li class="sub-menu">
-            <a href="manageposts.php">
+            <a  class="active" href="manageposts.php">
               <i class="fa fa-cogs"></i>
               <span>Post Management</span>
               </a>
@@ -249,7 +249,7 @@
               </a>
             
           <li>
-            <a class="active" href="admininbox.php">
+            <a href="admininbox.php">
               <i class="fa fa-envelope"></i>
               <span>Inbox </span>
               <span class="label label-theme pull-right mail-info">2</span>
@@ -280,9 +280,9 @@
     </aside>
     <!--sidebar end-->
  
-    <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
 
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   
 </body>
 

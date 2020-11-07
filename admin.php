@@ -4,6 +4,20 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Admin Dashboard</title>
+  <style type="text/css">
+  #clock {
+    width: 600px;
+    margin: 10px;
+    margin-right: 50px;
+    font-size: 100px;
+    display: inline-block;
+    float: left;
+    background-color: #AC545C;
+    color: #dbbcac;
+    border-radius: 30px;
+    border-style: none; 
+  }
+  </style>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/adminstyle2.css">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
@@ -221,7 +235,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="#"><img src="images/Juz.jpg" class="img-circle" width="80"></a></p>
+          <p class="centered"><a href="#"><img src="images/Juzly.jpg" class="img-circle" width="110" height="90"></a></p>
           <h5 class="centered">Juzly Ahamed</h5>
           <li class="mt">
             <a class="active" href="admin.php">
@@ -268,7 +282,7 @@
               </a>
           </li>
           <li>
-            <a href="#">
+            <a href="map.php">
               <i class="fa fa-map-marker"></i>
               <span>Google Maps </span>
               </a>
@@ -278,11 +292,58 @@
       </div>
     </aside>
     <!--sidebar end-->
-  </section>
-  <!-- js placed at the end of the document so the pages load faster -->
+
+    <section id="main-content">
+      <section class="wrapper">
+
+        <button id="clock">10:10:01</button>
+        <script type="text/javascript">
+          setInterval(displayclock, 500);
+          function displayclock(){
+            var time = new Date();
+            var hrs = time.getHours();
+            var min = time.getMinutes();
+            var sec = time.getSeconds();
+            var en = 'AM';
+
+            if (hrs > 12){
+              en = 'PM';
+            }
+            if (hrs > 12) {
+              hrs = hrs - 12;
+            }
+
+            if (hrs == 0){
+              hrs = 12 ;
+            }
+
+            if (hrs < 10){
+              hrs = '0' + hrs;
+            }
+            if (min < 10){
+              min = '0' + min;
+            }
+            if (sec < 10){
+              sec = '0' + sec;
+            }
+
+            document.getElementById('clock').innerHTML = hrs + ':' + min + ':' + sec + ' ' + en; 
+          }
+
+        </script>
+
+        <!--<div id="clock"></div>-->
+        
+        <div class="kamucalendar">
+          <iframe src="https://calendar.google.com/calendar/embed?src=h0rvvlhv436fso337b45180ons%40group.calendar.google.com&ctz=Asia%2FColombo" style="border:0" width="450" height="300" border="0" scrolling="no";></iframe>
+        </div>
+
+      </section>
+    </section>
+  <!-- js placed at the end of the document so the pages load faster 
   <script src="lib/jquery/jquery.min.js"></script>
 
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>-->
    <!--<script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
   <script src="lib/jquery.scrollTo.min.js"></script>
  <script src="lib/jquery.nicescroll.js" type="text/javascript"></script>

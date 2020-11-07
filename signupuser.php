@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>User Registration</title>
-  <link rel="stylesheet" type="text/css" href="loginstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/loginstyle.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
 </head>
@@ -22,14 +22,15 @@
             <div class="main">
                 <div class="bgc">
                     <div class="icon">
-                        <img src="images/login.png">
+                        <img src="images/eggplant.png">
                     </div>
+
 
                     <div class="banner-textleft">
                         
                         <form action="signup-check.php" method="post">
                             <div class="head">
-                                <img class="logo" src="logo.png">
+                                <img class="logo" src="images/logo.png">
                                 <h2 class="title">Signup</h2>
                             </div>
                         
@@ -95,6 +96,7 @@
                             <a href="login.php" class="ca">Already have an account?</a>
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>

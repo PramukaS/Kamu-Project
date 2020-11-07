@@ -1,3 +1,38 @@
+<?php
+include 'connection.php';
+
+if(isset($_POST['submit'])){
+	$email = mysqli_real_escape_string($conn, $_POST['email']);
+
+	$emailquery = " select * from accounts where email='$email'";
+	$query = mysqli_query($conn, $emailquery); 
+
+	$emailcount = mysqli_num_rows($query);
+
+	if($emailcount){
+		$userdata = mysqli_fetch_array($query);
+
+		$username = $userdata['name'];
+		$token = $userdata['token'];
+
+		$subject = "Recover Password";
+		$body = "Hi, $name. Click here to reset your password.
+		http://localhost/1emailverifregistr/recoverpass.php?token=$token";
+		$sender_email = "From:-kamuwetellyouthebest@gmail.com";
+
+		if(mail($email, $subject, $body, $sender_email)){
+			$_SESSION['msg'] = "Check youe email to reset your account $email password";
+			header('Location:login.php');
+		}else{
+			echo "Email sending failed....";
+		}
+	}else{
+		echo "No User Email Found";
+	}
+
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,26 +56,24 @@
 	        <div class="main">
 	        	<div class="bg">
 			        <div class="icon">
-			        	<img src="images/rest.png">
+			        	<img src="images/recover.png">
 			        </div>
 
 		        	<div class="banner-text">
-					<form action="loginvalid.php" method="post">
+					<form action="<php echo htmlentities ($_SERVER['PHP_SELF']); ?>" method="post">
 						<div class="head">
 							<img class="logo" src="images/logo.png">
-							<h2 class="title">Login</h2>
+							<h2 class="title">Recover Password</h2>
 						</div>
 						
 						<?php if (isset($_GET['error'])) { ?>
 		     			<p class="error"><?php echo $_GET['error']; ?></p>
 		     			<?php } ?>
-						<label class="username">Username</label>
-						<input type="text" name="username" placeholder="Username"><br>
-						<label>Password</label>
-						<input type="password" name="password" placeholder="Password"><br>
-						<button type="submit">Login</button>
-		          		<a href="signupuser.php" class="ca">Want to create an account?</a><br>
-		          		<a href="recoverpass.php" class="ca">Forgot password?</a>
+						
+						<label>Please Enter Your Email Here</label>
+						<input type="email" name="email" placeholder="Email Address"><br>
+						<button type="submit">Send Email</button>
+		          		
 					</form>
 				</div>
 	        </div>

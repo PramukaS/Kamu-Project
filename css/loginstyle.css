@@ -2,8 +2,7 @@
 body{
 	font-family: 'Quicksand', sans-serif;
 	margin: 0;
-	background-size: 100%
-
+	background-size: 100%;
 }
 
 .container{
@@ -24,16 +23,6 @@ body{
     transition: top 0.3s;
     z-index: 1;
 }
-
-/*.topnavi{
-    overflow: hidden; 
-    width: 100%;
-    position: absolute;
-    top: 1%;
-    padding-bottom: 15px;
-    background-color: white;
-    transition: top 0.3s;
-}*/
 
 .button{
     padding-top: 50px ;
@@ -190,7 +179,6 @@ img#logo{
  	color: #fff;
     z-index: 0;
 }
-
 .icon{
  	position: relative;
  	left: 5%;

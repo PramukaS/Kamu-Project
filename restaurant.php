@@ -8,7 +8,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="header">
         <div class="container"> 
             <div class="navbar">
                 <div class="logo">
@@ -25,48 +24,41 @@
                 </nav>
                 <img src="images/menu.png" class="menu-icon" alt="menu" onclick="menutoggle()">
             </div>
-            <div class="row">
-                <div class="col-2">
-                    <h1>Let's change <br> the way you eat!</h1>
-                    <p> We promote healthy food habits in order to prevent<br>
-                        non-communicable diseases in the Sri Lankan community.</p>
-                    <a href="" class="btn">Sign Up to eat &#8594;</a> 
-                </div>
-                <div class="col-2">
-                    <img src="Images/image1.png" alt="healthy food">
-                </div>
-            </div>
         </div>
-    </div>
+
     <!------ features categories ------>
 
     <div class="categories">
         <div class="small-container">
             <div class="row">
+            <?php
+                require_once("connect.php");
+                $query = "SELECT * FROM restaurant";
+                $query_run = mysqli_query($con,$query);
+                $check_restaurant = mysqli_num_rows($query_run) > 0;
+
+                if($check_restaurant){
+                    while($row = mysqli_fetch_array($query_run)){
+            ?>
+
                 <div class="col-3">
-                    <img src="images/diet_plan.png" alt="">
-                    <div class="content">
-                        <h1> Eat Healthy.<br> Stay Healthy.</h1>
-                        <p> We provide personalized meal plans with expert advice. Order food and get delivered it to your door steps.</p>
-                        <a href="" class="btn">Sign Up &#8594;</a> 
-                    </div>   
-                </div>
-                <div class="col-3">
-                    <img src="images/restaurant.png" alt="">
-                    <div class="content">
-                        <h1>Add Your <br> Restaurant Here.</h1>
-                        <p> You can add your meals and get connected with your customers.<br><br></p>
-                        <a href="" class="btn">Sign Up as Restaurant &#8594;</a>
+                    <div class="card">
+                        <div class="card-body">
+                            <a href=""><img src="<?php echo $row['image']; ?>" alt="restaurant image">
+                            <h2><?php echo $row['name']; ?></h2>
+                            <p><?php echo $row['location']; ?></p></a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-3">
-                    <img src="images/driver.png" alt="">
-                    <div class="content">
-                        <h1>Earn Money <br> From Kamu.lk</h1>
-                        <p>You can earn money by delivering foods.<br><br><br></p>
-                        <a href="" class="btn">Sign Up as Driver &#8594;</a> 
-                    </div>
-                </div>
+
+            <?php
+                       
+                    }
+                }
+                else{
+                    echo "No restaurant found";
+                }
+            ?>
             </div>
         </div>    
     </div>

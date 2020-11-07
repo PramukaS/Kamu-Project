@@ -223,7 +223,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="#"><img src="images/Juz.jpg" class="img-circle" width="80"></a></p>
+          <p class="centered"><a href="#"><img src="images/Juzly.jpg" class="img-circle" width="110" height="90"></a></p>
           <h5 class="centered">Juzly Ahamed</h5>
           <li class="mt">
             <a href="admin.php">

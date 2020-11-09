@@ -375,11 +375,5 @@ $result= mysqli_query($conn,$query);
         </div>
       </section>
     </section>
-
-  <script src="lib/jquery/jquery.min.js"></script>
-
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
 </html>
 

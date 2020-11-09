@@ -331,8 +331,6 @@
           }
 
         </script>
-
-        <!--<div id="clock"></div>-->
         
         <div class="kamucalendar">
           <iframe src="https://calendar.google.com/calendar/embed?src=h0rvvlhv436fso337b45180ons%40group.calendar.google.com&ctz=Asia%2FColombo" style="border:0" width="450" height="300" border="0" scrolling="no";></iframe>
@@ -340,17 +338,6 @@
 
       </section>
     </section>
-  <!-- js placed at the end of the document so the pages load faster 
-  <script src="lib/jquery/jquery.min.js"></script>
-
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>-->
-   <!--<script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
-  <script src="lib/jquery.scrollTo.min.js"></script>
- <script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
-  <script src="lib/jquery.sparkline.js"></script>
-  common script for all pages
-  <script src="lib/common-scripts.js"></script>-->
-  <!--script for this page-->
   
 </body>
 

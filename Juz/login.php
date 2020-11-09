@@ -8,15 +8,7 @@
 </head>
 	<body>
 		<div class="container">
-			<div class="topnav">
-	            <ul type="none">
-	                <li><a href="">About Us</a></li>
-	                <li><a href="">Blog</a></li>
-	                <li><a href="">Restaurants</a></li>
-	                <li><a href="index.php">Home</a></li>
-	            </ul>
-	            <a href=""><img id="logo" src="images/logo.png" alt="logo" ></a>  
-	        </div>
+			
 
 	        <div class="main">
 	        	<div class="bg">
@@ -45,13 +37,6 @@
 				</div>
 	        </div>
 	        
-			
-			<div class="footer">
-				<a href="https://www.facebook.com/juzly.ahamed.10"><img src="images/facebook.jpg"></a>
-			    <a href="https://www.instagram.com/juzly_ahamed98/"><img src="images/instagram.jpg"></a>
-			    <a href="https://twitter.com/login?lang=en"><img src="images/twitter.jpg"></a>
-			    <a href="https://www.youtube.com/watch?v=dD2EISBDjWM&list=PLr6-GrHUlVf_ZNmuQSXdS197Oyr1L9sPB"><img src="images/youtube.jpg"></a>
-			</div>
 		</div>
 
 	</body>

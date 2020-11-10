@@ -1,16 +1,26 @@
-<?php
-include_once('connection.php');
-$query="SELECT * FROM accounts";
-$result= mysqli_query($conn,$query);
+<?php  include('process.php'); ?>
+<?php 
+  if (isset($_GET['edit'])) {
+    $id = $_GET['edit'];
+    $update = true;
+    $record = mysqli_query($db, "SELECT * FROM accounts WHERE id=$id");
+
+    if (mysqli_num_rows($record) == 1 ) {
+      $n = mysqli_fetch_array($record);
+      $username = $n['username'];
+      $usertype = $n['usertype'];
+      $emailid = $n['emailid'];
+    }
+  }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+	<!--<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Manage Users</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 
 	<link rel="stylesheet" type="text/css" href="css/adminstyle2.css">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
@@ -20,7 +30,8 @@ $result= mysqli_query($conn,$query);
 </head>
 
 <body>
-<?php require_once 'process.php'; ?>
+
+
   <section id="container">
     <!-- TOP BAR CONTENT & NOTIFICATIONS-->
     <!--header start-->
@@ -122,7 +133,7 @@ $result= mysqli_query($conn,$query);
               </a>
           </li>
           <li>
-            <a href="map.php">
+            <a href="#">
               <i class="fa fa-map-marker"></i>
               <span>Google Maps </span>
               </a>
@@ -135,16 +146,17 @@ $result= mysqli_query($conn,$query);
 
     <section id="main-content">
       <section class="wrapper">
-          
-            <?php 
-            if (isset($_SESSION['message'])):?>
-            <div>
-              <?php echo $_SESSION['message'];
-                    unset($_SESSION['message']);
-              ?>
-            </div>
-          <?php endif ?>
 
+        <?php if (isset($_SESSION['message'])): ?>
+          <div class="msg">
+            <?php 
+              echo $_SESSION['message']; 
+              unset($_SESSION['message']);
+            ?>
+          </div>
+        <?php endif ?>
+
+        <?php $results = mysqli_query($db, "SELECT * FROM accounts"); ?>
   
 
         <div class="tableview">
@@ -159,18 +171,15 @@ $result= mysqli_query($conn,$query);
               <th>Email</th>
               <th>Action</th>
             </tr>
-            <?php
-              while($rows=mysqli_fetch_assoc($result)) {
-
-            ?>
+            <?php while ($row = mysqli_fetch_array($results)) { ?>
               <tr>
-                <td><?php echo $rows['id']; ?></td>
-                <td><?php echo $rows['username'];?></td>
-                <td><?php echo $rows['usertype'];?></td>
-                <td><?php echo $rows['emailid'];?></td>
-                <td><a href="manageusers.php?edit=<?php echo $rows['id'];?>"
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['username'];?></td>
+                <td><?php echo $row['usertype'];?></td>
+                <td><?php echo $row['emailid'];?></td>
+                <td><a href="manageusers.php?edit=<?php echo $row['id'];?>"
                   id="update">Edit</a>
-                  <a href="manageusers.php?delete=<?php echo $rows['id'];?>"
+                  <a href="process.php?delete=<?php echo $row['id'];?>"
                    id="delete">Delete</a>
 
                 </td>
@@ -196,7 +205,7 @@ $result= mysqli_query($conn,$query);
                
               <tr>
                 <td><label>User Email</label></td>
-                <td><input type="email" name="useremail" value="<?php echo $useremail; ?>"></td>
+                <td><input type="email" name="emailid" value="<?php echo $emailid; ?>"></td>
               </tr>
               <tr>
                 <td><label for="user">User Type</label></td>
@@ -206,7 +215,7 @@ $result= mysqli_query($conn,$query);
               <tr>
                 <td>
                   <?php if($update == true): ?>
-                    <button type="submit" id="add" name="edit">Update</button></td>
+                    <button type="submit" id="add" name="update">Update</button></td>
               </tr>
               <tr>
                 <td><?php else: ?><button type="submit" id="add" name="save">Save</button></td>
@@ -214,11 +223,11 @@ $result= mysqli_query($conn,$query);
             <?php endif; ?>
             </table>
             </div>
-            
-            
           </form>
         </div>
       </section>
     </section>
+</body>
+
 </html>
 

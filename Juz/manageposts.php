@@ -3,14 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Income Details</title>
+	<title>Manage Posts</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="css/adminstyle2.css">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="css/adminstyle.css">
   <link rel="stylesheet" type="text/css" href="css/adminstyle-responsive.css">
-
 </head>
 
 <body>
@@ -238,13 +237,13 @@
               </a>
           </li>
           <li class="sub-menu">
-            <a href="manageposts.php">
+            <a  class="active" href="manageposts.php">
               <i class="fa fa-cogs"></i>
               <span>Post Management</span>
               </a>
           </li>
           <li class="sub-menu">
-            <a  class="active" href="income.php">
+            <a href="income.php">
               <i class="fa fa-book"></i>
               <span>Income</span>
               </a>
@@ -280,10 +279,6 @@
       </div>
     </aside>
     <!--sidebar end-->
- 
-  <script src="lib/jquery/jquery.min.js"></script>
-
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   
 </body>
 

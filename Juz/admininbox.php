@@ -3,14 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Admin Reports</title>
+	<title>Admin Inbox</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="css/adminstyle2.css">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="css/adminstyle.css">
   <link rel="stylesheet" type="text/css" href="css/adminstyle-responsive.css">
-
 </head>
 
 <body>
@@ -250,14 +249,14 @@
               </a>
             
           <li>
-            <a href="admininbox.php">
+            <a class="active" href="admininbox.php">
               <i class="fa fa-envelope"></i>
               <span>Inbox </span>
               <span class="label label-theme pull-right mail-info">2</span>
               </a>
           </li>
-          <li  class="sub-menu">
-            <a class="active" href="adminreport.php">
+          <li class="sub-menu">
+            <a href="adminreport.php">
               <i class=" fa fa-bar-chart-o"></i>
               <span>Reports</span>
               </a>
@@ -280,10 +279,6 @@
       </div>
     </aside>
     <!--sidebar end-->
- 
-    <script src="lib/jquery/jquery.min.js"></script>
-
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

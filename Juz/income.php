@@ -3,13 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Admin Inbox</title>
+	<title>Income Details</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="css/adminstyle2.css">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="css/adminstyle.css">
   <link rel="stylesheet" type="text/css" href="css/adminstyle-responsive.css">
+
 </head>
 
 <body>
@@ -243,7 +244,7 @@
               </a>
           </li>
           <li class="sub-menu">
-            <a href="income.php">
+            <a  class="active" href="income.php">
               <i class="fa fa-book"></i>
               <span>Income</span>
               </a>
@@ -269,28 +270,16 @@
               </a>
           </li>
           <li>
-            <a class="active" href="map.php">
+            <a href="#">
               <i class="fa fa-map-marker"></i>
               <span>Google Maps </span>
-            </a>
+              </a>
           </li>
         </ul>
         <!-- sidebar menu end-->
       </div>
     </aside>
     <!--sidebar end-->
-    <section id="main-content">
-      <section class="wrapper">
-        <div>
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9029322875813!2d79.858964214318!3d6.902210820560755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25963120b1509%3A0x2db2c18a68712863!2sUniversity%20of%20Colombo%20School%20of%20Computing!5e0!3m2!1sen!2slk!4v1604328865982!5m2!1sen!2slk" width="1130" height="585" frameborder="1" style="border:1px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
-      </section>
-    </section>
- 
-    <script src="lib/jquery/jquery.min.js"></script>
-
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  
 </body>
 
 </html>

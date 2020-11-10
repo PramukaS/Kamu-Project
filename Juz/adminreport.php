@@ -1,16 +1,10 @@
-<?php
-include_once('connection.php');
-$query="SELECT * FROM accounts";
-$result= mysqli_query($conn,$query);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-	<!--<meta charset="utf-8">
+	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Manage Users</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<title>Admin Reports</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="css/adminstyle2.css">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
@@ -20,7 +14,6 @@ $result= mysqli_query($conn,$query);
 </head>
 
 <body>
-<?php require_once 'process.php'; ?>
   <section id="container">
     <!-- TOP BAR CONTENT & NOTIFICATIONS-->
     <!--header start-->
@@ -239,7 +232,7 @@ $result= mysqli_query($conn,$query);
               </a>
           </li>
           <li class="sub-menu">
-            <a class="active" href="manageusers.php">
+            <a  href="manageusers.php">
               <i class="fa fa-desktop"></i>
               <span>User Management</span>
               </a>
@@ -263,8 +256,8 @@ $result= mysqli_query($conn,$query);
               <span class="label label-theme pull-right mail-info">2</span>
               </a>
           </li>
-          <li class="sub-menu">
-            <a href="adminreport.php">
+          <li  class="sub-menu">
+            <a class="active" href="adminreport.php">
               <i class=" fa fa-bar-chart-o"></i>
               <span>Reports</span>
               </a>
@@ -287,98 +280,6 @@ $result= mysqli_query($conn,$query);
       </div>
     </aside>
     <!--sidebar end-->
-
-    <section id="main-content">
-      <section class="wrapper">
-          
-            <?php 
-            if (isset($_SESSION['message'])):?>
-            <div>
-              <?php echo $_SESSION['message'];
-                    unset($_SESSION['message']);
-              ?>
-            </div>
-          <?php endif ?>
-
-  
-
-        <div class="tableview">
-          <table class="table" border="1em">
-            <tr> 
-              <th colspan="5"><h2>User Profiles</h2></th>
-            </tr>
-            <tr>
-              <th>User ID</th>
-              <th>Username</th>
-              <th>Usertype</th>
-              <th>Email</th>
-              <th>Action</th>
-            </tr>
-            <?php
-              while($rows=mysqli_fetch_assoc($result)) {
-
-            ?>
-              <tr>
-                <td><?php echo $rows['id']; ?></td>
-                <td><?php echo $rows['username'];?></td>
-                <td><?php echo $rows['usertype'];?></td>
-                <td><?php echo $rows['emailid'];?></td>
-                <td><a href="manageusers.php?edit=<?php echo $rows['id'];?>"
-                  id="update">Edit</a>
-                  <a href="manageusers.php?delete=<?php echo $rows['id'];?>"
-                   id="delete">Delete</a>
-
-                </td>
-              </tr>
-
-
-            <?php
-            }
-            ?>
-          </table>
-          
-        </div>
-        <div>
-          <form action="process.php" method='POST'class="userform">
-            <div class="adduserview">
-              <table class="addusertable">
-                <td><input type="hidden" name="id" value="<?php echo $id; ?>"></td>
-              </tr>
-              <tr>
-                <td><label>Username</label></td>
-                <td><input type="text" name="username" value="<?php echo $username; ?>"></td>
-              </tr>
-               
-              <tr>
-                <td><label>User Email</label></td>
-                <td><input type="email" name="useremail" value="<?php echo $useremail; ?>"></td>
-              </tr>
-              <tr>
-                <td><label for="user">User Type</label></td>
-                <td><input type = "text" name="usertype"value="<?php echo $usertype; ?>">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <?php if($update == true): ?>
-                    <button type="submit" id="add" name="edit">Update</button></td>
-              </tr>
-              <tr>
-                <td><?php else: ?><button type="submit" id="add" name="save">Save</button></td>
-              </tr>
-            <?php endif; ?>
-            </table>
-            </div>
-            
-            
-          </form>
-        </div>
-      </section>
-    </section>
-
-  <script src="lib/jquery/jquery.min.js"></script>
-
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

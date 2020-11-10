@@ -1,71 +1,41 @@
-<?php
-session_start();
-include_once('connection.php');
+<?php 
+	session_start();
+	$db = mysqli_connect('localhost', 'root', '', 'kamu');
 
-$update=false;
-$id= 0;
-$username='';
-$useremail='';
-$usertype= '';
+	// initialize variables
+	$username = "";
+	$emailid = "";
+	$usertype = "";
+	$id = 0;
+	$update = false;
 
-if (isset($_POST['save'])) {
-	$username = $_POST['username'];
-	$usertype = $_POST['usertype'];
-	$useremail = $_POST['useremail'];
+	if (isset($_POST['save'])) {
+		$username = $_POST['username'];
+		$usertype=$_POST['usertype'];
+		$emailid = $_POST['emailid'];
 
-	$query="INSERT INTO accounts (username,usertype, useremail) VALUES ('$username', '$usertype', '$useremail')";
-
-	$result=mysqli_query($conn,$query);
-
-	$_SESSION['message'] = "Recored has been saved!";
-	$_SESSION['msg_type'] = "success";
-
-	header("location: manageusers.php");
-
-}
-
-if (isset($_GET['delete'])){
-	$id = $_GET['delete'];
-
-	$query ="DELETE FROM accounts Where id='$id'";
-	$result=mysqli_query($conn,$query);
-
-	$_SESSION['message'] = "Recored has been deleted!";
-	$_SESSION['msg_type'] = "success";
-
-	header("location: manageusers.php");
-
-}
-
-
-if (isset($_GET['edit'])){
-	$id = $_GET['edit'];
-	$update =true;
-	$query ="SELECT * FROM accounts WHERE id=$id";
-	$result=mysqli_query($conn,$query);
-
-	if(mysqli_num_rows($result)==1) {
-		$row = $result->fetch_array();
-		$username = $row['username'];
-		$useremail = $row['emailid'];
-		$usertype = $row['usertype'];
+		mysqli_query($db, "INSERT INTO accounts (username, usertype, emailid) VALUES ('$username', '$usertype', '$emailid')"); 
+		$_SESSION['message'] = "User details added Successfully!"; 
+		header('location: manageusers.php');
 	}
-}
 
-if (isset($_POST['update'])){
+	if (isset($_POST['update'])) {
 	$id = $_POST['id'];
 	$username = $_POST['username'];
-	$useremail =$_POST['emailid'];
 	$usertype = $_POST['usertype'];
+	$emailid = $_POST['emailid'];
 
-	$query ="UPDATE accounts SET username='$username', emailid = '$useremail', usertype ='$usertype' WHERE id = $id";
-	$result=mysqli_query($conn,$query);
 
-	$_SESSION['message'] = "Recored has been deleted!";
-	$_SESSION['msg_type'] = "warning"; 
+	mysqli_query($db, "UPDATE accounts SET username='$username', usertype='$usertype', emailid='$emailid' WHERE id=$id");
+	$_SESSION['message'] = "User details updated Successfully!"; 
+	header('location: manageusers.php');
+	}
 
-	header("location: manageusers.php");
-
-}
+	if (isset($_GET['delete'])) {
+	$id = $_GET['delete'];
+	mysqli_query($db, "DELETE FROM accounts WHERE id=$id");
+	$_SESSION['message'] = "User Account deleted Successfully!"; 
+	header('location: manageusers.php');
+	}
 
 ?>

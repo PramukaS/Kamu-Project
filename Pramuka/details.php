@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kamu.lk</title>
+        <title>Kamu.lk | Detail</title>
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     </head>
@@ -24,6 +24,8 @@
                 <img src="images/menu.png" class="menu-icon" alt="menu" onclick="menutoggle()">
             </div>
         </div>
+
+        ------
 
     <!------ features categories ------>
 

@@ -24,8 +24,8 @@
         </li>
         <li> FOOD
             <ul style="display: none;">
-                <li><a href="">add</a></li>
-                <li><a href="">view</a></li>
+                <li><a href="food_form.php">add</a></li>
+                <li><a href="food_view.php">view</a></li>
             </ul>
         </li>
         <li>POST

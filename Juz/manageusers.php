@@ -17,12 +17,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!--<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Manage Users</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Manage Users</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 
-	<link rel="stylesheet" type="text/css" href="css/adminstyle2.css">
+  <link rel="stylesheet" type="text/css" href="css/adminstyle2.css">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="css/adminstyle.css">
   <link rel="stylesheet" type="text/css" href="css/adminstyle-responsive.css">
@@ -30,8 +30,6 @@
 </head>
 
 <body>
-
-
   <section id="container">
     <!-- TOP BAR CONTENT & NOTIFICATIONS-->
     <!--header start-->
@@ -49,7 +47,6 @@
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
               <i class="fa fa-tasks"></i>
-              <span class="badge bg-theme">4</span>
               </a>
           </li>
           <!-- settings end -->
@@ -57,7 +54,6 @@
           <li id="header_inbox_bar" class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
               <i class="fa fa-envelope-o"></i>
-              <span class="badge bg-theme">5</span>
               </a>
           </li>
           <!-- inbox dropdown end -->
@@ -65,8 +61,7 @@
           <li id="header_notification_bar" class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
               <i class="fa fa-bell-o"></i>
-              <span class="badge bg-warning">7</span>
-              </a>
+            </a>
           </li>
           <!-- notification dropdown end -->
         </ul>
@@ -87,7 +82,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <p class="centered"><a href="#"><img src="images/Juzly.jpg" class="img-circle" width="110" height="90"></a></p>
-          <h5 class="centered">Juzly Ahamed</h5>
+          <h5 class="centered">Admin User</h5>
           <li class="mt">
             <a href="admin.php">
               <i class="fa fa-dashboard"></i>
@@ -116,7 +111,6 @@
             <a href="admininbox.php">
               <i class="fa fa-envelope"></i>
               <span>Inbox </span>
-              <span class="label label-theme pull-right mail-info">2</span>
               </a>
           </li>
           <li class="sub-menu">
@@ -127,13 +121,13 @@
             
           </li>
           <li class="sub-menu">
-            <a href="#">
+            <a href="adminchat.php">
               <i class="fa fa-comments-o"></i>
               <span>Chat Room</span>
               </a>
           </li>
           <li>
-            <a href="#">
+            <a href="map.php">
               <i class="fa fa-map-marker"></i>
               <span>Google Maps </span>
               </a>

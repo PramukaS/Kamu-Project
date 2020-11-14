@@ -61,15 +61,10 @@ body{
 
 .nurtritionist-dashboard .dropdown:hover .dropdown-content {display: block;}
 
-.nurtritionist-dashboard .content {
-    padding: 20px;
-    float: right;
-    width: 76%;
-}
 
 .nurtritionist-dashboard .sidebar {
     width: 200px;
-    background-color: #92ec8a;
+    background-color: #1b1b1b;
     margin: 10px;
     box-shadow: rgba(0,0,0,0.12) 0px 1px 4px 1px;
     float: left;
@@ -79,6 +74,12 @@ body{
     border-radius: 20px;
     padding-left: 10px;
     margin-left: 20px;
+}
+
+.nurtritionist-dashboard .content {
+    padding: 20px;
+    float: right;
+    width: 76%;
 }
 
 .nurtritionist-dashboard .sidebar > ul {
@@ -93,6 +94,7 @@ body{
 .nurtritionist-dashboard .sidebar > ul  li {
     cursor: default;
     margin: 10px;
+    color: white;
 }
 
 .nurtritionist-dashboard .sidebar > ul > li {
@@ -103,11 +105,15 @@ body{
     font-weight: bold;
 }
 
+.nurtritionist-dashboard .sidebar ul li ul li{
+    margin-left: 50px;
+}
+
 .nurtritionist-dashboard .sidebar ul li ul li a {
-    background-color: #7df573;
+    background-color: #1b1b1b;
     padding: 10px 100px 10px 5px;
     text-align: left;
-    color: #000;
+    color: white;
     text-decoration: none;
     display:block;
 }
@@ -116,7 +122,7 @@ body{
     padding: 20px 5px;
     text-decoration: none;
     text-align: left;
-    color: #000;
+    color:white;
     font-weight: bold;
 }
 

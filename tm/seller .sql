@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2020 at 07:17 AM
+-- Generation Time: Nov 15, 2020 at 11:29 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -18,45 +18,32 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `registration`
+-- Database: `tm`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `restaurant`
+-- Table structure for table `seller`
 --
 
-CREATE TABLE `restaurant` (
+CREATE TABLE `seller` (
   `res_id` int(11) NOT NULL,
   `storename` varchar(50) NOT NULL,
   `storeaddress` varchar(100) NOT NULL,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
-  `phonenumber` int(30) NOT NULL,
+  `phonenumber` int(50) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `businesstype` varchar(50) NOT NULL
+  `businesstype` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `seller`
 --
 
---
--- Indexes for table `restaurant`
---
-ALTER TABLE `restaurant`
-  ADD PRIMARY KEY (`res_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `restaurant`
---
-ALTER TABLE `restaurant`
-  MODIFY `res_id` int(11) NOT NULL AUTO_INCREMENT;
+INSERT INTO `seller` (`res_id`, `storename`, `storeaddress`, `firstname`, `lastname`, `phonenumber`, `email`, `businesstype`) VALUES
+(0, 'vijitha', '113/1,', 'Pathmika', 'Weerarathna', 123456789, '98castle923@gmail.com', 'Restaurant');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

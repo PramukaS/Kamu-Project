@@ -41,7 +41,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 				else if ($row["usertype"] == "nutrition") 
 				{
 					$_SESSION['NutritionistUser'] = $row["username"];
-					header('Location: nutritionist.php');
+					header('Location: Nutritionist/dash.php');
 				}
 				else if ($row["usertype"] == "seller") 
 				{

@@ -1,118 +1,219 @@
-body {
-    background-color: #86f183;
-  }
-
-
-
-.bg-img {
-    /* The image used */
-    background-image: url("../img/add_restaurant_signup_bg_img.jpg");
-  
-    /* Control the height of the image */
-    min-height: 380px;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: relative;
-    display: block;
-  }
-
-
-
-.body{
-    background: #e5e5e5;
-    padding: 0;
+*{
     margin: 0;
-    font-family: 'Signika', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-
-.box{  
-    top:50% ;
-    left: 50%;
-    
-
-    background: rgb(187, 240, 103);
-    position: absolute;;
-    border-radius: 8px;
-    transform: translate(-50%,-50%);
-    width: 800px;
-    padding: 40px 0px;
-    box-shadow: 0 1px 4px slateblue,0 0 20px slateblue;
-
-
+body{
+    font-family: 'Open Sans', sans-serif;
 }
 
-.left{
-    width: 50%;
-    float: left;
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
-.right{
-    width: 50%;
-    float: right;
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    color: black;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn{
+    display: inline-block;
+    background: #5CDB95;
+    color: black;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background:#4d634b ;
+}
+
+.header{
+    background:radial-gradient(#fff,#bbeeb5 ) ;
+}
+
+.header .row{
+    margin-top: 50px;
+}
+
+.categories{
+    margin: 70px 0;
+}
+
+.col-3{
+    flex-basis: 30%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.col-3 img{
+    width: 100%;
+    height: 200px;
+}
+
+.small-container{
+    max-width: 1080px ;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content{
+    display: flex;
+    align-items: right;
+    flex-wrap: wrap;
+}
+
+.content h1{
+    font-size: 30px;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+.content p{
+    font-size: 15px;
+    line-height: 20px;
+}
+
+/*--------footer-----*/
+
+.footer{
+    background: #5CDB95;
+    color: black;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+
+.footer h3{
+    margin-bottom: 20px;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1{
+    flex-basis: 30%;
+    text-align: left;
+}
+
+.footer-col-1 img{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-col-2, .footer-col-3{
+    flex-basis: 15%;
     text-align: center;
 }
 
-.input{
-    border-radius: 20px;
-    box-shadow: 0 2px 20px 0 slateblue;
-    padding: 10px 25px;
-    margin: none;
+ul{
+    list-style-type: none;
 }
 
-input[type=storeName],input[type=storeAddress],input[type=firstName],input[type=lastName], input[type=email],input[type=tel],select[id=storeType]{
-    background: transparent;
+.footer hr{
     border: none;
-    outline: none;
+    background: #4d634b;
+    height: 1px;
+    margin: 20px 0;
 }
 
-button[type=submit]{
-    border-radius: 20px;
-    box-shadow: 0 2px 20px 0 slateblue;
-    padding: 5px 20px;
-    font-size: medium;
-    font-family: cursive;
-    color: cornsilk;
-    background-color: rgb(6, 41, 12);
-
-
-}
-
-h5{
+.copyright{
     text-align: center;
-    display: inline;
-
 }
 
-.icon{
-    color: #9900cc;
-    font-size: 20px;
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
 }
 
-input[type=button]{
-    padding: 10px 50px;
-    border-radius: 20px;
-    border: none;
-    color: white;
-    font-weight: 14px;
-    outline: none;
-    background-image: linear-gradient(to bottom right,slateblue,#9900cc);
-
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
 }
 
-.logo1{
-    margin-top: 0%;
-    margin-left: 10%;
-    
-}
-
-.logo2{
-    margin-bottom: 10%;
-    margin-left: 5%;
-    margin-top: 3%;
-
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: left;
+    }
+    .col-2, .col-3{
+        flex-basis: 100%;
+    }
 }

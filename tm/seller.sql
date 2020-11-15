@@ -52,8 +52,7 @@ INSERT INTO `seller` (`res_id`, `storename`, `storeaddress`, `firstname`, `lastn
 --
 -- Indexes for table `seller`
 --
-ALTER TABLE `seller`
-  ADD PRIMARY KEY (`res_id`);
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

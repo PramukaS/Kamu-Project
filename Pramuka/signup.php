@@ -5,7 +5,7 @@
 	<title>SIGN UP</title>
      <link rel="stylesheet" type="text/css" href="css/logstyle.css">
      <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
 </head>
 <body>
      <div class="container"> 
@@ -40,7 +40,6 @@
                               <?php if (isset($_GET['success'])) { ?>
                                    <p class="success"><?php echo $_GET['success']; ?></p>
                               <?php } ?>
-
                               <label>Name</label>
                               <?php if (isset($_GET['name'])) { ?>
                                    <input type="text" 
@@ -72,10 +71,12 @@
                                    <input type="text" 
                                         name="emailid" 
                                         placeholder="Email ID"
+                                        autocomplete="off"
                                         value="<?php echo $_GET['emailid']; ?>"><br>
                               <?php }else{ ?>
                                    <input type="text" 
                                         name="emailid" 
+                                        autocomplete="off"
                                         placeholder="Email ID"><br>
                               <?php }?>
 
@@ -84,10 +85,12 @@
                                    <input type="text" 
                                         name="age" 
                                         placeholder="Age"
+                                        autocomplete="off"
                                         value="<?php echo $_GET['age']; ?>"><br>
                               <?php }else{ ?>
                                    <input type="text" 
                                         name="age" 
+                                        autocomplete="off"
                                         placeholder="Age"><br>
                               <?php }?>
 
@@ -95,11 +98,13 @@
                               <?php if (isset($_GET['height'])) { ?>
                                    <input type="text" 
                                         name="height" 
+                                        autocomplete="off"
                                         placeholder="Height"
                                         value="<?php echo $_GET['height']; ?>"><br>
                               <?php }else{ ?>
                                    <input type="text" 
                                         name="height" 
+                                        autocomplete="off"
                                         placeholder="Height"><br>
                               <?php }?>
 
@@ -107,11 +112,13 @@
                               <?php if (isset($_GET['weight'])) { ?>
                                    <input type="text" 
                                         name="weight" 
+                                        autocomplete="off"
                                         placeholder="Weight"
                                         value="<?php echo $_GET['weight']; ?>"><br>
                               <?php }else{ ?>
                                    <input type="text" 
                                         name="weight" 
+                                        autocomplete="off"
                                         placeholder="Weight"><br>
                               <?php }?>
 
@@ -119,22 +126,26 @@
                               <?php if (isset($_GET['bmi'])) { ?>
                                    <input type="text" 
                                         name="bmi" 
+                                        autocomplete="off"
                                         placeholder="BMI"
                                         value="<?php echo $_GET['bmi']; ?>"><br>
                               <?php }else{ ?>
                                    <input type="text" 
                                         name="bmi" 
+                                        autocomplete="off"
                                         placeholder="BMI"><br>
                               <?php }?>
 
                               <label>Password</label>
                               <input type="password" 
                                    name="password" 
+                                   autocomplete="off"
                                    placeholder="Password"><br>
 
                               <label>Re Password</label>
                               <input type="password" 
                                    name="re_password" 
+                                   autocomplete="off"
                                    placeholder="Re_Password"><br>
 
                               <button type="submit">Sign Up</button>

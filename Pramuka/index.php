@@ -68,7 +68,7 @@
                     <div class="content">
                         <h1>Add Your <br> Restaurant Here.</h1>
                         <p> You can add your meals and get connected with your customers.<br><br></p>
-                        <a href="" class="btn">Sign Up as Restaurant &#8594;</a>
+                        <a href="restaurnt_signup.php" class="btn">Sign Up as Restaurant &#8594;</a>
                     </div>
                 </div>
                 <div class="col-3">

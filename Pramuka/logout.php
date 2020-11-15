@@ -1,8 +1,8 @@
-<?php
-
+<?php 
 session_start();
-unset($_SESSION['loggedin']);
-header('Location: index.php');
-die();
 
+session_unset();
+session_destroy();
+
+header("Location: login.php");
 ?>

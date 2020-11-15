@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2020 at 11:29 AM
+-- Generation Time: Nov 15, 2020 at 11:44 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -44,6 +44,16 @@ CREATE TABLE `seller` (
 
 INSERT INTO `seller` (`res_id`, `storename`, `storeaddress`, `firstname`, `lastname`, `phonenumber`, `email`, `businesstype`) VALUES
 (0, 'vijitha', '113/1,', 'Pathmika', 'Weerarathna', 123456789, '98castle923@gmail.com', 'Restaurant');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `seller`
+--
+ALTER TABLE `seller`
+  ADD PRIMARY KEY (`res_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

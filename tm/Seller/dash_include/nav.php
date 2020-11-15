@@ -3,7 +3,7 @@
         <img src="img/logo.png" alt="logo" width="125px">
     </div>
     <div class="nav-right">
-        <h3>Hi Seller</h3>
+        <h3>Hi SELLER</h3>
             <div class="dropdown">
                 <button class="dropbtn"><img  src="img/seller_icon.png" alt="user" width="50px"></button>
                 <div class="dropdown-content">
@@ -19,7 +19,7 @@
         <li><a href="">EDIT RESTAURANT DETAILS</a></li>
         <li> FOOD MENU
             <ul style="display: none;">
-                <li><a href="">ADD FOOD ITEMS</a></li>
+                <li><a href="dash_include/add_menu_item.php">ADD FOOD ITEMS</a></li>
                 <li><a href="">VIEW FOOD ITEMS</a></li>
                 <li><a href="">DELETE FOOD ITEMS</a></li>
                 <li><a href="">EDIT FOOD ITEMS</a></li>

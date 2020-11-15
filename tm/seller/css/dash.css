@@ -8,40 +8,40 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-.nurtritionist-dashboard{
+.seller-dashboard {
     width: 100%;
 }
 
-.nurtritionist-dashboard .navbar{
+.seller-dashboard .navbar{
     display: flex;
     align-items: center;
     box-shadow: rgba(0,0,0,0.12) 0px 1px 4px 1px;
 }
 
-.nurtritionist-dashboard .nav-right {
+.seller-dashboard .nav-right {
     margin-left: auto;
     text-align: right;
 }
 
-.nurtritionist-dashboard .nav-right h3{
+.seller-dashboard .nav-right h3{
     display: inline-block;
     padding-right: 10px;
     font-size: 20px;
 }
 
-.nurtritionist-dashboard .dropbtn {
+.seller-dashboard .dropbtn {
     background-color: #ffffff;
     padding: 40px;
     font-size: 16px;
     border: none;
 }
 
-.nurtritionist-dashboard .dropdown {
+.seller-dashboard .dropdown {
     position: relative;
     display: inline-block;
 }
 
-.nurtritionist-dashboard .dropdown-content {
+.seller-dashboard .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -49,7 +49,7 @@ body{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.nurtritionist-dashboard .dropdown-content a {
+.seller-dashboard .dropdown-content a {
     color: black;
     padding: 20px 20px;
     text-decoration: none;
@@ -57,14 +57,19 @@ body{
     flex-direction: row;
 }
 
-.nurtritionist-dashboard .dropdown-content a:hover {background-color: #ddd;}
+.seller-dashboard .dropdown-content a:hover {background-color: #ddd;}
 
-.nurtritionist-dashboard .dropdown:hover .dropdown-content {display: block;}
+.seller-dashboard .dropdown:hover .dropdown-content {display: block;}
 
+.seller-dashboard .content {
+    padding: 20px;
+    float: right;
+    width: 76%;
+}
 
-.nurtritionist-dashboard .sidebar {
+.seller-dashboard .sidebar {
     width: 200px;
-    background-color: #1b1b1b;
+    background-color: #92ec8a;
     margin: 10px;
     box-shadow: rgba(0,0,0,0.12) 0px 1px 4px 1px;
     float: left;
@@ -76,13 +81,7 @@ body{
     margin-left: 20px;
 }
 
-.nurtritionist-dashboard .content {
-    padding: 20px;
-    float: right;
-    width: 76%;
-}
-
-.nurtritionist-dashboard .sidebar > ul {
+.seller-dashboard .sidebar > ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -91,13 +90,12 @@ body{
     margin-top: 100px;
 }
 
-.nurtritionist-dashboard .sidebar > ul  li {
+.seller-dashboard .sidebar > ul  li {
     cursor: default;
     margin: 10px;
-    color: white;
 }
 
-.nurtritionist-dashboard .sidebar > ul > li {
+.seller-dashboard .sidebar > ul > li {
     padding: 20px 5px;
     border-bottom: 1px solid gray;
     cursor: pointer;
@@ -105,24 +103,20 @@ body{
     font-weight: bold;
 }
 
-.nurtritionist-dashboard .sidebar ul li ul li{
-    margin-left: 50px;
-}
-
-.nurtritionist-dashboard .sidebar ul li ul li a {
-    background-color: #1b1b1b;
+.seller-dashboard .sidebar ul li ul li a {
+    background-color: #7df573;
     padding: 10px 100px 10px 5px;
     text-align: left;
-    color: white;
+    color: #000;
     text-decoration: none;
     display:block;
 }
 
-.nurtritionist-dashboard .sidebar ul a{
+.seller-dashboard .sidebar ul a{
     padding: 20px 5px;
     text-decoration: none;
     text-align: left;
-    color:white;
+    color: #000;
     font-weight: bold;
 }
 
@@ -130,7 +124,7 @@ body{
     padding-left: 70px;
 }
 
-.nurtritionist-dashboard .container {
+.seller-dashboard .container {
     display: flex;
     align-items: center;
     justify-content: space-around;

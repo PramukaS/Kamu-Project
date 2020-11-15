@@ -19,7 +19,7 @@
                         <li><a href="index.php">Home</a></li>
                         <li><a href="restaurant.php">Restaurants</a></li>
                         <li><a href="">About Us</a></li>
-                        <li><a href="" class="btn">Login</a></li>
+                        <li><a href="log.php" class="btn">Login</a></li>
                     </ul>
                 </nav>
                 <img src="images/menu.png" class="menu-icon" alt="menu" onclick="menutoggle()">
@@ -60,7 +60,7 @@
                     <div class="content">
                         <h1> Eat Healthy.<br> Stay Healthy.</h1>
                         <p> We provide personalized meal plans with expert advice. Order food and get delivered it to your door steps.</p>
-                        <a href="" class="btn">Sign Up User &#8594;</a> 
+                        <a href="signup.php" class="btn">Sign Up User &#8594;</a> 
                     </div>   
                 </div>
                 <div class="col-3">

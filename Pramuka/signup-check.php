@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-include "db_conn.php";
+include "connect.php";
 
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emailid']) && isset($_POST['age']) && isset($_POST['height']) && isset($_POST['weight']) && isset($_POST['bmi'])
     && isset($_POST['name']) && isset($_POST['re_password'])) {
@@ -74,14 +74,14 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
         $password = md5($password);
 
 	    $sql = "SELECT * FROM users WHERE username='$username' ";
-		$result = mysqli_query($conn, $sql);
+		$result = mysqli_query($con, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			header("Location: signup.php?error=The username is taken try another&$user_data");
 	        exit();
 		}else {
            $sql2 = "INSERT INTO users(username, name, emailid, age, height, weight, bmi, password) VALUES('$username', '$name', '$emailid', '$age', '$height', '$weight', '$bmi','$password')";
-           $result2 = mysqli_query($conn, $sql2);
+           $result2 = mysqli_query($con, $sql2);
            if ($result2) {
            	 header("Location: signup.php?success=Your account has been created successfully");
 	         exit();

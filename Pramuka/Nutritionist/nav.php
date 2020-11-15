@@ -8,7 +8,7 @@
                 <button class="dropbtn"><img  src="../images/user.png" alt="user" width="50px"></button>
                 <div class="dropdown-content">
                     <a href="#">My Profile</a>
-                    <a href="logout.php">Log Out</a>
+                    <a href="../logout.php">Log Out</a>
                 </div>
             </div>
     </div>

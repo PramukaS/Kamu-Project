@@ -1,3 +1,13 @@
+<?php
+    require_once("../connect.php");
+    session_start();
+
+    if(!isset($_SESSION['NutritionistUser'])) {
+        header('Location:../log.php');
+        die();
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

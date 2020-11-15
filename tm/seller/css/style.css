@@ -33,9 +33,10 @@ body {
 .box{  
     top:50% ;
     left: 50%;
+    
 
     background: rgb(187, 240, 103);
-    position: absolute;
+    position: absolute;;
     border-radius: 8px;
     transform: translate(-50%,-50%);
     width: 800px;

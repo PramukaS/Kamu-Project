@@ -1,5 +1,5 @@
-<?php 
-session_start(); 
+<?php
+session_start();
 include "connect.php";
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -21,11 +21,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         header("Location: log.php?error=Password is required");
 	    exit();
 	}else{
-		
+
 		// hashing the password
         $password = md5($password);
 
-        
+
 		$sql = "SELECT * FROM accounts WHERE username='$username' AND password='$password'";
 		$result = mysqli_query($con, $sql);
 
@@ -38,20 +38,20 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 					$_SESSION['AdminUser'] = $row["username"];
 					header('Location: admin.php');
 				}
-				else if ($row["usertype"] == "nutrition") 
+				else if ($row["usertype"] == "nutrition")
 				{
 					$_SESSION['NutritionistUser'] = $row["username"];
 					header('Location: Nutritionist/dash.php');
 				}
-				else if ($row["usertype"] == "seller") 
+				else if ($row["usertype"] == "seller")
 				{
 					$_SESSION['SellerUser'] = $row["username"];
-					header('Location: seller.php');
+					header('Location:Seller/dash.php');
 				}
-				else if ($row["usertype"] == "delivery") 
+				else if ($row["usertype"] == "delivery")
 				{
 					$_SESSION['DeliveryUser'] = $row["username"];
-					header('Location: delivery.php');
+					header('Location:Driver/dash.php');
 				}
 				else
 				{

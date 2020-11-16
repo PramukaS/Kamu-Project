@@ -6,47 +6,47 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background-image: url('../img/delivery_bg.png');
+    background-image: url('../img/seller_bg.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: lightyellow;
 }
 
-.driver-dashboard {
+.seller-dashboard {
     width: 100%;
 }
 
-.driver-dashboard .navbar{
+.seller-dashboard .navbar{
     display: flex;
     align-items: center;
     box-shadow: rgba(32, 62, 126, 0.12) 0px 1px 4px 1px;
 }
 
-.driver-dashboard .nav-right {
+.seller-dashboard .nav-right {
     margin-left: auto;
     text-align: right;
 }
 
-.driver-dashboard .nav-right h3{
+.seller-dashboard .nav-right h3{
     display: inline-block;
     padding-right: 10px;
     font-size: 20px;
 }
 
-.driver-dashboard .dropbtn {
+.seller-dashboard .dropbtn {
     background-color: #ffffff;
     padding: 40px;
     font-size: 16px;
     border: none;
 }
 
-.driver-dashboard .dropdown {
+.seller-dashboard .dropdown {
     position: relative;
     display: inline-block;
 }
 
-.driver-dashboard .dropdown-content {
+.seller-dashboard .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -54,7 +54,7 @@ body{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.driver-dashboard .dropdown-content a {
+.seller-dashboard .dropdown-content a {
     color: black;
     padding: 20px 20px;
     text-decoration: none;
@@ -62,17 +62,17 @@ body{
     flex-direction: row;
 }
 
-.driver-dashboard .dropdown-content a:hover {background-color: #ddd;}
+.seller-dashboard .dropdown-content a:hover {background-color: #ddd;}
 
-.driver-dashboard .dropdown:hover .dropdown-content {display: block;}
+.seller-dashboard .dropdown:hover .dropdown-content {display: block;}
 
-.driver-dashboard .content {
+.seller-dashboard .content {
     padding: 20px;
     float: right;
     width: 76%;
 }
 
-.driver-dashboard .sidebar {
+.seller-dashboard .sidebar {
     width: 200px;
     background-color: #4350ff;
     margin: 10px;
@@ -86,7 +86,7 @@ body{
     margin-left: 20px;
 }
 
-.driver-dashboard .sidebar > ul {
+.seller-dashboard .sidebar > ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -95,12 +95,12 @@ body{
     margin-top: 100px;
 }
 
-.driver-dashboard .sidebar > ul  li {
+.seller-dashboard .sidebar > ul  li {
     cursor: default;
     margin: 10px;
 }
 
-.driver-dashboard .sidebar > ul > li {
+.seller-dashboard .sidebar > ul > li {
     padding: 20px 5px;
     border-bottom: 1px solid gray;
     cursor: pointer;
@@ -108,7 +108,7 @@ body{
     font-weight: bold;
 }
 
-.driver-dashboard .sidebar ul li ul li a {
+.seller-dashboard .sidebar ul li ul li a {
     border-radius: 10%;
     background-color: #86a5be;
     padding: 10px 100px 10px 5px;
@@ -118,7 +118,7 @@ body{
     display:block;
 }
 
-.driver-dashboard .sidebar ul li ul li m a {
+.seller-dashboard .sidebar ul li ul li m a {
     border-radius: 10%;
     background-color: #ac3632;
     padding: 10px 100px 10px 5px;
@@ -127,7 +127,7 @@ body{
     text-decoration: none;
     display:block;
 }
-.driver-dashboard .sidebar ul li m a {
+.seller-dashboard .sidebar ul li m a {
     border-radius: 10%;
     background-color: #ac3632;
     padding: 10px 100px 10px 5px;
@@ -138,7 +138,7 @@ body{
 }
 
 
-.driver-dashboard .sidebar ul a{
+.seller-dashboard .sidebar ul a{
     padding: 20px 5px;
     text-decoration: none;
     text-align: left;
@@ -150,7 +150,7 @@ body{
     padding-left: 70px;
 }
 
-.driver-dashboard .container {
+.seller-dashboard .container {
     display: flex;
     align-items: center;
     justify-content: space-around;

@@ -3,7 +3,7 @@
         <img src="img/logo.png" alt="logo" width="125px">
     </div>
     <div class="nav-right">
-        <h3>Hi SELLER</h3>
+        <h3>Hi Seller</h3>
             <div class="dropdown">
                 <button class="dropbtn"><img  src="img/seller_icon.png" alt="user" width="50px"></button>
                 <div class="dropdown-content">
@@ -16,21 +16,20 @@
 <div class="sidebar">
     <ul>
         <li> <a href="dash.php">DASHBOARD</a></li>
-        <li><a href="">EDIT RESTAURANT DETAILS</a></li>
-        <li> FOOD MENU
-            <ul style="display: none;">
-                <li><a href="dash_include/add_menu_item.php">ADD FOOD ITEMS</a></li>
-                <li><a href="">VIEW FOOD ITEMS</a></li>
-                <li><a href="">DELETE FOOD ITEMS</a></li>
-                <li><a href="">EDIT FOOD ITEMS</a></li>
+        <li><a href="dash_include/edit_restaurant_details.php">Edit Restaurant Details</a></li>
+        <li> Food Menu
+        <ul style="display: none;">
+                <li><a href="dash_include/add_food_item.php">Add Food Items</a></li>
+                <li><a href="dash_include/edit_food_item.php">Edit Food Items</a></li>            
+                <li><a href="dash_include/view_food_item.php">View Food Items</a></li>
             </ul>
         </li>
-        <li>ORDER DETAILS
+        <li>Order Details
             <ul style="display: none;">
-                <li><a href="">VIEW ORDER DETAILS</a></li>
-                <li><a href="">ORDER HISTORY</a></li>
+                <li><a href="dash_include/view_order.php">View Order details</a></li>
+                <li><a href="dash_include/order_history.php">Order History</a></li>
             </ul>
         </li>
-        <li><a href="">CONTACT ADMINISTRATOR</a></li>
+        <li><a href="dash_include/contact_admin.php">Contact Administrator</a></li>
     </ul>
 </div>

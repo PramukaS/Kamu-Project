@@ -6,6 +6,10 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
+    background-image: url('../img/seller_bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     background-color: lightyellow;
 }
 
@@ -106,13 +110,33 @@ body{
 
 .seller-dashboard .sidebar ul li ul li a {
     border-radius: 10%;
-    background-color: #b0cee6;
+    background-color: #86a5be;
     padding: 10px 100px 10px 5px;
     text-align: left;
     color: #000;
     text-decoration: none;
     display:block;
 }
+
+.seller-dashboard .sidebar ul li ul li m a {
+    border-radius: 10%;
+    background-color: #ac3632;
+    padding: 10px 100px 10px 5px;
+    text-align: left;
+    color: rgb(240, 227, 227);
+    text-decoration: none;
+    display:block;
+}
+.seller-dashboard .sidebar ul li m a {
+    border-radius: 10%;
+    background-color: #ac3632;
+    padding: 10px 100px 10px 5px;
+    text-align: left;
+    color: rgb(240, 227, 227);
+    text-decoration: none;
+    display:block;
+}
+
 
 .seller-dashboard .sidebar ul a{
     padding: 20px 5px;
@@ -131,6 +155,7 @@ body{
     align-items: center;
     justify-content: space-around;
 }
+
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

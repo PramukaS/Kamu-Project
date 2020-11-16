@@ -16,9 +16,10 @@
                 <nav>
                     <ul id="MenuItems">
                         <li><a href="index.php">Home</a></li>
+                        <li><a href="blog.php">Blog</a></li>
                         <li><a href="restaurant.php">Restaurants</a></li>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="" class="btn">Login</a></li>
+                        <li><a href="aboutus.php">About Us</a></li>
+                        <li><a href="log.php" class="btn">Login</a></li>
                     </ul>
                 </nav>
                 <img src="images/menu.png" class="menu-icon" alt="menu" onclick="menutoggle()">
@@ -85,7 +86,7 @@
                     <div class="footer-col-2">
                         <h3>Useful Links</h3>
                         <ul>
-                            <li><a href="">Restaurant</a></li>
+                            <li><a href="restaurant.php">Restaurant</a></li>
                             <li><a href="">Privacy Policy</a></li>
                             <li><a href="">Terms of Service</a></li>
                             <li><a href="">Contact Us</a></li>

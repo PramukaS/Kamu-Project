@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,500");
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+
+}
+.topnav{
+    overflow: hidden; 
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-bottom: 10px;
+    padding-top: 10;
+    background-color: white;
+    transition: all 4s ease-in-out;
+}
+
+.button{
+    padding-top: 50px ;
+    padding-left: 90px;
+}
+
+.topnav ul li{
+    padding: 0px 20px;
+}
+
+.topnav ul li a {
+    float: right;
+    color:black;
+    text-align: center;
+    padding: 40px 40px;
+    text-decoration: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.topnav ul li a#login{
+    color: white;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 60px;
+    padding: 25px 40px;
+}
+img#logo{  
+    width:150px;height:85px;
+    position: absolute; 
+    padding: 5px 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+	top:0; 
+	left:0; 
+}
+
+.topnav ul li a:hover {
+   color: red;
+}
+
+
+/*delivery driver signup body*/
+.body1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 0px;
+	background-color: #fff;
+}
+
+/*contact us  body*/
+.body2{
+	background-image: url("../images/food8.jpg"); 
+	background-size: 100%;
+	display: flex;
+	min-height: 100vh;
+}
+
+/*contact us----------------*/
+.container{
+	width: 800px;
+	max-width: 800px;
+	margin-left: 250px;
+	margin-right: 50px
+}
+
+.container .text{
+	background: #fff;
+	width: 800px;
+	max-width: 800px;
+	margin-left: 0px;
+	margin-right: 20px
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	opacity: 0.9;
+	font-size: 35px;
+	font-weight: 600;
+	text-align: center;
+	background: webkit-linear-gradient(right ,#56d8e4,#9f01ea,#56d8e4,#9f01ea);
+
+}
+
+
+.container .form1{
+	padding: 30px 0 0 0 0;
+	border: 3px solid #fff;
+	background-color: #fff;
+	opacity: 0.7;
+	
+}
+
+.container .form1 .form-row{
+	display: flex;
+	margin: 32px 30px 0 30px;
+	
+}
+
+.form1 .form-row .input-data{
+	width: 100%;
+	height: 40px;
+	margin: 0 20px;
+	position: relative;
+}
+
+.form1 .form-row.textarea{
+	height: 70px;
+}
+
+.input-data input,
+.textarea textarea{
+	display: block;
+	height: 100%;
+	width: 100%;
+	border:none;
+	font-size: 17px;
+	border-bottom: 2px solid rgba(0,0,0,0.12);
+
+}
+
+
+.textarea textarea{
+	resize: none;
+	padding-top: 10px;
+}
+
+
+.container .inner input{
+	width:650px;
+	padding: 8px 10px;
+	margin-left: 40px;
+	font-size: 25px;
+	border:0;
+	background: #8EE4AF;
+	color: #000000;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 50px;
+	outline: none;
+}
+
+.container .contact-title{
+	padding: 80px;
+  	width:100%;
+  	height:10%;
+	line-height:10px;
+ 	text-align: center;
+	background: #8EE4AF;
+	margin-top:70px;
+	color: #fff;
+	transition: all 4s ease-in-out;
+	font-size: 50px;
+	
+}
+.container .contact-title h2{
+	padding-top: 10px;
+	font-size: 30px;
+}
+.container .contact-info{
+	
+	width: 100%;
+	line-height: 40px;
+	
+	font-size: 18px;
+	
+
+}
+
+.contact-title h1{
+	font-size: 32px;
+	line-height: 10px;
+}
+
+.contact-title h2{
+	font-size: 16px;
+}
+.table{
+	width: 150px;
+	padding-left: 20px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	width: 640px;
+	opacity: 0.9;
+	background-color: #fff;
+}
+
+
+
+/*delivery drive------------------r*/
+
+.container1{
+	background: #8EE4AF;
+	width: 2000px;
+	margin-top: 25px;
+	max-width: 2000px;
+	padding: 0px 0px 0px 0px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+
+}
+
+
+.container1 .text2{
+	padding: 20px;
+  	width:100%;
+  	height:200px;
+	line-height:20px;
+ 	text-align: left;
+	margin-top:0px;
+	transition: all 4s ease-in-out;
+	margin-left: 80px;
+	
+}
+
+.container1 .img{
+	padding-left: 150px;
+ 	left: 5%;
+ 	top: 6%;
+ 	float: left;
+ 	display: inline-block;
+ 	width: 450px;
+ 	height: 450px;
+}
+
+.container1 .form2{
+	width: 200px;
+
+}
+fieldset{
+	padding-left: 100px;
+	background-color:#5CDB95; 
+	margin-left: 600px;
+	border-radius: 20px;
+	padding: 30px;
+	align-items: right;
+	border-color: #32CD32;
+	
+	
+}
+.container1 .dis{
+	display: inline-block;
+}
+
+.container1 .form2 .form-row{
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+	margin-left: 15px;
+	margin-top: 15px;
+	margin-right: 15px;
+	
+}
+.container1 .form2 .form-row input,
+.container1 .form2 .form-row textarea{
+	width: 100%;
+	outline: none;
+	border:2px solid #9ACD32;
+	font-size: 15px;
+	padding: 8px 10px;
+	border-radius: 18px;
+	transition: all 0.3s ease;
+}
+.container1 .form2 .form-row textarea{
+	resize: none;
+	height: 125px;
+
+}
+.container1 .form2 .form-row p{
+	font-size: 14px;
+	margin-left: 20px;
+}
+.container1 .form2 .form-row .check{
+	width: 5px;
+	height: 15px;
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+.container1 .form2 .form-row .check input[type="checkbox"]{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+}
+.container1 .form2 .form-row .check .checkmark{
+	width: 15px;
+	height: 15px;
+	border: 2px solid #32CD32;
+	display: block;
+	position: relative;
+
+}
+.container1 .form2 .form-row .check .checkmark:before{
+	content: "";
+	position: absolute;
+	top: 1px;
+	left: 2px;
+	width: 5px;
+	height: 2px;
+	border:2px solid;
+	border-color: transparent transparent #fff #fff;
+	transform: rotate(-45deg);
+	display: none;
+}
+.container1 .form2 .form-row .check input[type="checkbox"]:checked ~ .checkmark{
+	background:#32CD32;
+}
+.container1 .form2 .form-row .check input[type="checkbox"]:checked ~ .checkmark:before{
+	display: block;
+}
+
+.container1 .form2 .form-row .inner input{
+	width: 420px;
+	padding: 8px 10px;
+	font-size: 15px;
+	border:0;
+	background: #32CD32;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 50px;
+	outline: none;
+}
+
+.container1 button{
+	border-radius: 100px;
+	background-color:#32CD32;
+	border-color:#32CD32;
+	font-size: 15px;
+	width: 80px;
+}
+
+
+.table1{
+	align-items: center;
+	
+	margin-left: 600px;
+}
+
+.body1 .container1 .contact-title{
+	padding: 40px;
+  	width:100%;
+  	height:10%;
+	line-height:25px;
+ 	text-align: center;
+	background: #8EE4AF;
+	margin-top:80px;
+	color: #fff;
+	text-transform: uppercase;
+	transition: all 4s ease-in-out;
+	font-size: 35px;
+
+
+}
+
+
+.footer{
+    background: black;
+    color: white;
+    height: 300px;
+    position: relative;
+}
+
+
+
+/*aboutus------------------------------*/
+.container2{
+	width: 100;
+	height: auto;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.about{
+	width: 100%;
+	height: 650px;
+	background-image: url(../images/food6.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.text3{
+	color: #8EE4AF;
+    font-size: 30px;
+	text-align: center;
+}
+.line{
+	width: 550px;
+	height: 8px;
+	background-color: #6B8E23;
+	display: block;
+	
+	border-radius: 10px;
+	left: 10%
+	box-shadow: 0px 15px 12px 0px #000;
+}
+.content{
+    width: 100%;
+   	height: auto;
+   	background-color: #8EE4AF;
+   	font-size: 20px;
+   	line-height: 30px;
+   	text-align: center;
+
+}

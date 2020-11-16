@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,500");
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+
+}
+.topnav{
+    overflow: hidden; 
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-bottom: 10px;
+    padding-top: 10;
+    background-color: white;
+    /*transition: all 4s ease-in-out;*/
+}
+
+.button{
+    padding-top: 50px ;
+    padding-left: 90px;
+}
+
+.topnav ul li{
+    padding: 0px 20px;
+}
+
+.topnav ul li a {
+    float: right;
+    color:black;
+    text-align: center;
+    padding: 40px 40px;
+    text-decoration: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.topnav ul li a#login{
+    color: white;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 60px;
+    padding: 25px 40px;
+}
+img#logo{  
+    width:150px;height:85px;
+    position: absolute; 
+    padding: 5px 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+	top:0; 
+	left:0; 
+}
+
+.topnav ul li a:hover {
+   color: red;
+}
+
+
+.footer{
+    background: black;
+    color: white;
+    height: 100px;
+    position: relative;
+}
+
+/*contact nutritionist body--------------------------------------------*/
+.con_nut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0px;
+    background-color: #8EE4AF;
+    background-size: 100%;
+}
+
+
+.container1{
+    background: #8EE4AF;
+    background-size: 100%;
+    width: 100%;
+    margin-top: 25px;
+    max-width: 1500px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.container1 .dis{
+    display: inline-block;
+}
+
+
+.container1 .img{
+    padding-left: 150px;
+    left: 5%;
+    top: 6%;
+    float: left;
+    display: inline-block;
+    width: 450px;
+    height: 250px;
+    margin-top: 150px;
+}
+
+.container1 .form2{
+    width: 80px;
+    display: inline-block;
+    
+    /*float: right;*/
+    padding-left: 140px;
+    padding-top: 150px;
+}
+
+.container1 fieldset{
+    
+    background-color:#5CDB95; 
+    margin-left: 0px;
+    border-radius: 20px;
+    align-items: right;
+    border-color: #32CD32;   
+    
+}
+fieldset h2{
+    padding: 10px 0 10px 250px;
+    color: #fff;
+}
+
+.container1 .form2 .form-row{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+    
+}
+.container1 .form2 .form-row input,
+.container1 .form2 .form-row textarea{
+    width: 100%;
+    outline: none;
+    border:2px solid #9ACD32;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+.container1 .form2 .form-row textarea{
+    resize: none;
+    height: 125px;
+    width: 700px;
+
+}
+
+.container1 .form2 .form-row .inner input{
+    width: 420px;
+    padding: 8px 10px 10px 30px;
+    margin: 0px 40px 0px 80px;
+    font-size: 20px;
+    border:0;
+    background: #32CD32;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50px;
+    outline: none;
+}
+
+.container1 button{
+    border-radius: 20px;
+    background-color:#A9A9A9;
+    border-color:#808080;
+    font-size: 25px;
+    width:400px;
+    padding-left: 40px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container1 button .btn{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+.form2 select{
+    width: 200px;
+}
+
+.table-con{
+    table-layout: auto;
+    margin:20px 20px 20px 20px;
+    width:300px;
+    border: 20px;
+    column-span: 15px;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+/*request mealplan------------------------------------------------------*/
+
+
+
+
+
+.mealplan{
+    
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0px;
+    background-color: #8EE4AF;
+    background-size: 100%;
+}
+
+.container4{
+    background: #8EE4AF;
+    background-size: 100%;
+    width: 100%;
+    margin-top: 25px;
+    max-width: 1500px;
+    padding: 0px 0px 0px 0px;
+}
+
+.container4 .title-mealplan{
+    padding: 80px;
+    width:100%;
+    height:10%;
+    line-height:10px;
+    text-align: center;
+    background: #8EE4AF;
+    margin-top:70px;
+    color: #fff;
+    
+    font-size: 40px;
+    text-transform: uppercase;
+    
+}
+
+section{
+    display: inline-block;
+}
+section h3{
+    padding-left: 50px;
+    color: #fff;
+    padding-top: 10px;
+}
+section .sec1{
+    align-items: left;
+    background-color:#fff; 
+
+}
+section .sec2{
+    align-items: right;
+    padding-top: 10px;
+    margin-top: 10px;
+    height: 200px;
+    display: inline-block;
+    
+}
+.sec2{
+    top: 50%;
+    padding-bottom: 260px;
+    margin-bottom: 260px;
+
+}
+.sec3{
+    top: 50%;
+    padding-bottom: 425px;
+    margin-bottom: 425px;
+
+}
+form .form-mealplan{
+    width: 300px;
+    float: right;
+    padding-left: 40px;
+
+}
+fieldset{
+    background-color:#5CDB95; 
+    margin-left: 20px;
+    border-radius: 20px;
+    align-items: right;
+    border-color: #32CD32;
+    display: inline-block;
+    width: 400px;
+  
+
+}
+fieldset .field1{
+
+    padding-bottom: 300px;
+    margin-bottom: 300px;
+}
+
+
+
+.container4 .form-mealplan .form-row{
+    margin-bottom: 15px;
+    width: 350px;
+    align-items: center;
+    margin-left: 15px;
+    
+    margin-right: 15px;
+    
+}
+.container4 .form-mealplan .form-row input,
+.container4 .form-mealplan .form-row textarea{
+    width: 100%;
+    outline: none;
+    border:2px solid #9ACD32;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    display: block;
+}
+.container4 .form-mealplan .form-row textarea{
+    resize: none;
+    height: 125px;
+
+}
+label {
+    color: #444;
+    font-size: 18px;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*view profile----------------------------------------------------------*/
+
+
+
+
+
+.body2{
+    background-color: #8EE4AF; 
+    
+
+}
+.btn1{
+    float: right;
+    width:100px;
+    height: 40px;
+    padding: 10 ,10,0,10;
+}
+button{
+    margin: 40px;
+    width: 150px;
+}
+.cont2{
+    margin-top: 57px;
+    padding-top: 57px;
+}
+.cont2 .wrapper{
+    width: 600px;
+    margin: 0 auto;
+    background-color:#fff;
+}
+.cont2 .img1{
+    border-radius: 60px;
+    border: 2px solid;
+    height:150px;
+    width: 150px;
+}
+
+.text-cont{
+    align-items:center;
+
+}
+table{
+    border: 20px;
+    padding-left: 40px;
+}
+td{
+    padding: 15px , 2px; 
+    
+
+}
+.wrapper {
+    margin-top: 20px;
+    padding-top: 20px;
+    height: 100%;
+}
+h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 250px;
+    
+}

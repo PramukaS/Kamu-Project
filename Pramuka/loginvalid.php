@@ -56,7 +56,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 				else
 				{
 					$_SESSION['registereduser'] = $row["username"];
-					header('Location: home.php');
+					header('Location: User/UserHome.php');
 				}
 
 			}

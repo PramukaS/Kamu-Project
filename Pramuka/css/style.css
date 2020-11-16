@@ -68,6 +68,11 @@ p{
     margin: 25px 0;
 }
 
+.col-2 h2{
+    font-size: 40px;
+    line-height: 60px;
+} 
+
 .btn{
     display: inline-block;
     background: #5CDB95;

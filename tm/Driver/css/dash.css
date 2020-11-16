@@ -6,42 +6,47 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
+    background-image: url('../img/delivery_bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: lightyellow;
 }
 
-.seller-dashboard {
+.driver-dashboard {
     width: 100%;
 }
 
-.seller-dashboard .navbar{
+.driver-dashboard .navbar{
     display: flex;
     align-items: center;
-    box-shadow: rgba(0,0,0,0.12) 0px 1px 4px 1px;
+    box-shadow: rgba(32, 62, 126, 0.12) 0px 1px 4px 1px;
 }
 
-.seller-dashboard .nav-right {
+.driver-dashboard .nav-right {
     margin-left: auto;
     text-align: right;
 }
 
-.seller-dashboard .nav-right h3{
+.driver-dashboard .nav-right h3{
     display: inline-block;
     padding-right: 10px;
     font-size: 20px;
 }
 
-.seller-dashboard .dropbtn {
+.driver-dashboard .dropbtn {
     background-color: #ffffff;
     padding: 40px;
     font-size: 16px;
     border: none;
 }
 
-.seller-dashboard .dropdown {
+.driver-dashboard .dropdown {
     position: relative;
     display: inline-block;
 }
 
-.seller-dashboard .dropdown-content {
+.driver-dashboard .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -49,7 +54,7 @@ body{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.seller-dashboard .dropdown-content a {
+.driver-dashboard .dropdown-content a {
     color: black;
     padding: 20px 20px;
     text-decoration: none;
@@ -57,21 +62,21 @@ body{
     flex-direction: row;
 }
 
-.seller-dashboard .dropdown-content a:hover {background-color: #ddd;}
+.driver-dashboard .dropdown-content a:hover {background-color: #ddd;}
 
-.seller-dashboard .dropdown:hover .dropdown-content {display: block;}
+.driver-dashboard .dropdown:hover .dropdown-content {display: block;}
 
-.seller-dashboard .content {
+.driver-dashboard .content {
     padding: 20px;
     float: right;
     width: 76%;
 }
 
-.seller-dashboard .sidebar {
+.driver-dashboard .sidebar {
     width: 200px;
-    background-color: #eaee08;
+    background-color: #4350ff;
     margin: 10px;
-    box-shadow: rgba(118, 160, 39, 0.12) 0px 1px 4px 1px;
+    box-shadow: rgba(17, 8, 68, 0.12) 0px 1px 4px 1px;
     float: left;
     width: 20%;
     min-height: 90vh;
@@ -81,7 +86,7 @@ body{
     margin-left: 20px;
 }
 
-.seller-dashboard .sidebar > ul {
+.driver-dashboard .sidebar > ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -90,31 +95,50 @@ body{
     margin-top: 100px;
 }
 
-.seller-dashboard .sidebar > ul  li {
+.driver-dashboard .sidebar > ul  li {
     cursor: default;
     margin: 10px;
 }
 
-.seller-dashboard .sidebar > ul > li {
+.driver-dashboard .sidebar > ul > li {
     padding: 20px 5px;
-    border-bottom: 1px solid rgb(158, 163, 79);
-    background-origin: padding-box;
+    border-bottom: 1px solid gray;
     cursor: pointer;
     letter-spacing: 1px;
     font-weight: bold;
 }
 
-.seller-dashboard .sidebar ul li ul li a {
-    background-color: #b5ca67;
-    padding: 10px 100px 10px 5px;
+.driver-dashboard .sidebar ul li ul li a {
     border-radius: 10%;
+    background-color: #86a5be;
+    padding: 10px 100px 10px 5px;
     text-align: left;
     color: #000;
     text-decoration: none;
     display:block;
 }
 
-.seller-dashboard .sidebar ul a{
+.driver-dashboard .sidebar ul li ul li m a {
+    border-radius: 10%;
+    background-color: #ac3632;
+    padding: 10px 100px 10px 5px;
+    text-align: left;
+    color: rgb(240, 227, 227);
+    text-decoration: none;
+    display:block;
+}
+.driver-dashboard .sidebar ul li m a {
+    border-radius: 10%;
+    background-color: #ac3632;
+    padding: 10px 100px 10px 5px;
+    text-align: left;
+    color: rgb(240, 227, 227);
+    text-decoration: none;
+    display:block;
+}
+
+
+.driver-dashboard .sidebar ul a{
     padding: 20px 5px;
     text-decoration: none;
     text-align: left;
@@ -126,11 +150,12 @@ body{
     padding-left: 70px;
 }
 
-.seller-dashboard .container {
+.driver-dashboard .container {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -145,15 +170,15 @@ body{
 
 #card1 {
   
-    background-color: #ec874c;
+    background-color: #9ab637;
 }
 
 #card2 {
-    background-color: #09b1f3;
+    background-color: #3b6575;
 }
 
 #card3 {
-    background-color: #f038e0;
+    background-color: #b35bab;
 }
 
 .card i {

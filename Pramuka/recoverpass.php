@@ -51,10 +51,12 @@ if(isset($_POST['submit'])){
 				<nav>
 					<ul id="MenuItems">
 						<li><a href="index.php">Home</a></li>
+						<li><a href="blog.php">Blog</a></li>
 						<li><a href="restaurant.php">Restaurants</a></li>
-						<li><a href="">About Us</a></li>
+						<li><a href="aboutus.php">About Us</a></li>
 					</ul>
 				</nav>
+				<img src="images/menu.png" class="menu-icon" alt="menu" onclick="menutoggle()">
 			</div>
 	        <div class="row">
 				<div class="col-2">
@@ -81,5 +83,20 @@ if(isset($_POST['submit'])){
 				</div>
 			</div>
 		</div>
+
+		<Script>
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px";
+            
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight = "250px";
+                }
+                else{
+                    MenuItems.style.maxHeight = "0px";
+                }
+            } 
+		</Script>
+		
 	</body>
 </html>

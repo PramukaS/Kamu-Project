@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	overflow-x: hidden;
+	background-color:#D3D3D3;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.topnav{
+    overflow: hidden; 
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-bottom: 10px;
+    padding-top: 10;
+    background-color: white;
+    transition: all 4s ease-in-out;
+}
+
+.button{
+    padding-top: 50px ;
+    padding-left: 90px;
+}
+
+.topnav ul li{
+    padding: 0px 20px;
+}
+
+.topnav ul li a {
+    float: right;
+    color:black;
+    text-align: center;
+    padding: 40px 40px;
+    text-decoration: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.topnav ul li a#login{
+    color: white;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 60px;
+    padding: 25px 40px;
+}
+img#logo{  
+    width:150px;height:85px;
+    position: absolute; 
+    padding: 5px 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+	top:0; 
+	left:0; 
+}
+
+.topnav ul li a:hover {
+   color: red;
+}
+.footer{
+    background: black;
+    color: white;
+    height: 120px;
+    position: relative;
+}
+
+
+
+aside{
+    
+    top: 40px;
+   
+    width: 270px;
+    height: 100vh;
+    z-index: 10;
+    float: left;
+    
+    
+}
+
+
+
+.side-menu{
+    
+    background: #A9A9A9;
+    width: 270px;
+    height: 100%;
+    margin-top: 100px;
+    
+
+}
+
+.side-menu a{
+    display: block;
+    line-height: 60px;
+    transition: 0.5s;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.side-menu a:hover{
+    background: rgb(142,200,175);
+    padding-left: 20px;
+}
+
+.side-menu span{
+    font-size: 20px;
+    margin-left: 10px;
+    color: white;
+}
+
+.side-menu i{
+    font-size: 20px;
+    margin-left: 10px;
+    color: white;
+}
+nav .menu-bar{
+    float: right;
+    margin-top: 18px;
+    display: none;
+    margin-right: 20px;
+}
+#menu{
+    display: none;
+}
+
+.side-menu .Logout{
+    display: none;
+}
+
+@media(max-width: 850px){
+    .side-menu a span{
+        display: none;
+    }
+
+    .side-menu center{
+        display: none;
+    }
+
+    .side-menu{
+        width: 100px;
+    }
+
+    .side-menu a i{
+        display: block;
+        line-height: 80px;
+        text-align: center;
+        margin-left: 0;
+        font-size: 35px;
+    }
+}
+
+
+
+
+
+.column{
+    display: inline-block;
+    margin-left:80px;
+    margin-right: 100px;
+    width: 100px;
+    padding: 60px;
+    padding-right: 180px;
+  
+}
+
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.cont{
+    max-width: 50000px;
+    margin:auto;
+    background: #D3D3D3;
+    overflow: auto;
+    
+}
+.colomn img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition: .5s ease;
+    
+
+}
+
+.desc{
+    padding: 10px;
+    width: 310px;
+    margin: 5px 0px 40px 0px;
+    text-align: center;
+    font-size: 20px;
+    color:#0000FF;
+    border-radius: 20px;
+    background-color: #A9A9A9;
+}
+
+.cont a:hover{
+    
+    opacity: 0.6;
+}
+
+.cont .title-mealplan{
+    padding: 70px;
+    width:100%;
+    height:10%;
+    line-height:10px;
+    text-align: center;
+    background: #8EE4AF;
+    margin-top:80px;
+    color: #fff;
+    transition: all 4s ease-in-out;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+#show{
+    display: none;
+}
+
+#data{
+    display: none;
+}
+
+
+
+
+
+
+
+/*--------------Add post------------------------*/
+
+.add2{
+    background: #A9A9A9;
+    background-size: 100%;
+    width: 100%;
+    margin-top: 150px;
+    max-width: 1500px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.body-add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0px;
+    background-color: #A9A9A9;
+    background-size: 100%;
+}
+
+.add2 .f2{
+    width: 1200px;
+    padding-left: 350px;
+    padding-right: 200px;
+}
+fieldset{
+    
+    background-color:#D3D3D3; 
+    margin-left: 0px;
+    border-radius: 20px;
+    align-items: right;
+    border-color: #fff;
+    
+}
+
+.add2 .f2 .form-row{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+    
+}
+.add2 .f2 .form-row input,
+.add2 .f2 .form-row textarea{
+    width: 100%;
+    outline: none;
+    border:2px solid #A9A9A9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+.add2 .f2 .form-row textarea{
+    resize: none;
+    height: 125px;
+    width: 600px;
+}
+.table1{
+    margin-left: 40px;
+}
+
+
+.add2 .f2 .form-row .inner input{
+    width: 600px;
+    padding: 8px 20px 10px 20px;
+    font-size: 20px;
+    border:0;
+    background: #A9A9A9;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50px;
+    outline: none;
+}
+.inner input:hover{
+    opacity: 0.6;
+}
+
+.add2 button{
+    border-radius: 100px;
+    border-color:#32CD32;
+    font-size: 15px;
+    width: 150px;
+   
+    
+}
+
+/*----------View table-------------*/
+
+table {
+    margin: 40px 40px 0px 100px;
+}
+
+
+
+table .tb1{
+    
+
+    width: 1000px;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    table-layout: fixed;
+    /*z-index: 4;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 500px;*/
+
+
+}
+table ,th{
+    padding: 20px;
+    color: #fff;
+    border: 2px solid #080808;
+    border-collapse: collapse;
+    font-size:25px;
+    background:#A9A9A9;
+}
+
+table ,tr,td{
+    padding: 25px;
+    color: #fff;
+    border: 2px solid #080808;
+    border-collapse: collapse;
+    font-size: 20px;
+    background: #9ACD32;
+}
+
+td:hover{
+    background: green;
+}
+
+.btn-info{
+    padding-right: 25px;
+}

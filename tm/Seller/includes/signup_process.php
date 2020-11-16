@@ -7,7 +7,7 @@
 	$_SESSION['success'] = "";
 
 // connect to database
-$db = mysqli_connect('localhost','root','','kamu');
+$db = mysqli_connect('localhost', 'root', '', 'tm');
 
 // REGISTER USER
 if (isset($_POST['reg_seller'])) {
@@ -24,7 +24,7 @@ if (isset($_POST['reg_seller'])) {
 	// form validation: ensure that the form is correctly filled
 	if (empty($strName)) { array_push($errors, "Store name is required!"); }
 	if (empty($strAddress)) { array_push($errors, "Store Address is required!"); }
-	if (empty($fname)) { array_push($errors, "first name is required!"); }
+	if (empty($fname)) { array_push($errors, "firt name is required!"); }
 	if (empty($lname)) { array_push($errors, "last name is required!"); }
 	if (empty($contactNo)) { array_push($errors, "contactNo is required!"); }
 	if (empty($email)) { array_push($errors, "email is required!"); }
@@ -38,7 +38,7 @@ if (isset($_POST['reg_seller'])) {
 
 		$_SESSION['storename'] = $strName;
 		$_SESSION['success'] = "You have registered successfully";
-		header('location: log.php');
+		header('location: index.php');
 	} else {
 		$_SESSION['errors'] = $errors;
 		 //header('Location: restaurnt_signup.php');

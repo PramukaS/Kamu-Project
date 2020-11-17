@@ -2,7 +2,7 @@
 <html>
 
 <?php
-include_once '../../connection/connect.php';
+include_once '../../connect.php';
 
 
 if(isset($_POST['submit']))           //if upload btn is pressed
@@ -41,7 +41,7 @@ if(isset($_POST['submit']))           //if upload btn is pressed
                         else
                             {
                             $sql = "INSERT INTO fooditem(Res_id,FName,Description,price,img) VALUE('".$_POST['res_name']."','".$_POST['d_name']."','".$_POST['about']."','".$_POST['price']."','".$fnew."')";  // store the submited data ino the database :images
-                            mysqli_query($db, $sql); 
+                            mysqli_query($con, $sql); 
                             move_uploaded_file($temp, $store);
 
                             if($mysqli_query=True){
@@ -173,8 +173,8 @@ if(isset($_POST['submit']))           //if upload btn is pressed
 													<select name="res_name" class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
                                                         <option>--Select Restaurant--</option>                                                        
                                                         <?php
-                                                            require_once('../../connection/connect.php');
-                                                            $query = $db->query("SELECT * FROM seller");
+                                                            require_once('../../connect.php');
+                                                            $query = $con->query("SELECT * FROM seller");
 
                                                             while ($result = $query->fetch_assoc()) {
                                                                 echo "<option value='" . $result['res_id'] . "'>" . $result['storename'] . "</option>";
@@ -182,7 +182,7 @@ if(isset($_POST['submit']))           //if upload btn is pressed
                                                                 //$result['resturant_name'] <= resturant name from the resturant table
                                                             }
 
-                                                            $db->close();
+                                                            $con->close();
                                                             ?> 
                                                      </select>
                                                 </div>

@@ -77,7 +77,7 @@
                     <div class="content">
                         <h1>Earn Money <br> From Kamu.lk</h1>
                         <p>You can earn money by delivering foods.<br><br><br></p>
-                        <a href="" class="btn">Sign Up as Driver &#8594;</a> 
+                        <a href="Driver_signup.php" class="btn">Sign Up as Driver &#8594;</a> 
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 <hr>
-                <p class="copyright"> Copyright 2020 - Kamu.lk</p>
+                <p class="copyright"> All rights 2020 - Kamu.lk</p>
             </div>
         </div>
 

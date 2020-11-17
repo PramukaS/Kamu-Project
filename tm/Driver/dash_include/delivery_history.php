@@ -5,6 +5,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<style>
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 75%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }
+
+        tr:nth-child(even) {
+        background-color: #dddddd;
+        }
+        .button {
+            background-color: blue;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            }
+            
+
+        </style>
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,26 +56,72 @@
                 <a href="accept_orders.php" class="card" id="card1" style="display: block;">
                     <i class="fas fa-inbox"></i>
                     <div class="container">
-                        <h4><b>Accept Orders</br>0</b ></h4>
+                        <h4><b>Accept Orders</br>3</b ></h4>
                     </div>
                 </a>
                 <a href="delivery_history.php" class="card" id="card2" style="display: block;">
                     <i class="fas fa-list-alt"></i>
                     <div class=" container">
-                        <h4><b>Delivery History</br>0</b></h4>
+                        <h4><b>Delivery History</br>3</b></h4>
                     </div>
                  </a>
-                <a href="" class="card" id="card3" style="display: block;">
+                <a href="earnings.php" class="card" id="card3" style="display: block;">
                     <i class="fas fa-money-check-alt"></i>
                     <div class="container">
-                        <h4><b>Earnings</br>0</b></h4>
+                        <h4><b>Earnings</br>350.00</b></h4>
                     </div>
                 </a>
             </div>
         </div>
     </div>
     <div class="content">  
-                DeliveryHistoryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy           
+         <table>
+            <tr>
+                <th>Date</th>
+                <th>Restaurant Name</th>
+                <th>Order ID</th>
+                <th>Customer Name</th>
+                <th>Payment</th>
+                <th>Order Status</th>
+                
+            </tr>
+            <tr>
+                <td>1/11/2020</td>
+                <td>Mathara Bath Kade</td>
+                <td>12</td>
+                <td>Mr.Nishantha</td>
+                <td>350.00</td>
+                <td>Completed</td>
+                
+            </tr>
+            <tr>
+                <td>1/11/2020</td>
+                <td>Nelum Hotel</td>
+                <td>145</td>
+                <td>Mr.Kasun</td>
+                <td>1450.00</td>
+                <td>Completed</td>
+                
+            </tr>
+            <tr>
+                <td>1/11/2020</td>
+                <td>Wasana Restaurant</td>
+                <td>15</td>
+                <td>Mr.Kumara</td>
+                <td>750.00</td>
+                <td>Completed</td>
+            </tr>
+             <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th></th>
+                <td><a href="earnings.php"><button type="button" class="button">View</button></a></td>
+
+             </tr>
+
+         </table>       
     </div>    
 
 

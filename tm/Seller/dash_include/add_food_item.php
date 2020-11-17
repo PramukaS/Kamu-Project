@@ -1,6 +1,84 @@
 <!DOCTYPE html>
 <html>
 
+<?php
+include_once '../../connection/connect.php';
+
+
+if(isset($_POST['submit']))           //if upload btn is pressed
+{
+	if(empty($_POST['d_name'])||empty($_POST['about'])||$_POST['price']==''||$_POST['res_name']=='')
+		{	
+	$error = 	'<div class="alert alert-danger alert-dismissible fade show">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<strong>All fields Must be Fillup!</strong>
+	</div>';
+																
+        }
+        
+	else
+		{
+
+                $fname = $_FILES['file']['name'];
+                $temp = $_FILES['file']['tmp_name'];
+                $fsize = $_FILES['file']['size'];
+                $extension = explode('.',$fname);
+                $extension = strtolower(end($extension));  
+                $fnew = uniqid().'.'.$extension;
+                $store = "Res_img/fooditem/".basename($fnew);   
+                                // the path to store the upload image
+                if($extension == 'jpg'||$extension == 'png'||$extension == 'gif' )
+                        {        
+                        if($fsize>=1000000)
+                            {
+                                $error = 	'<div class="alert alert-danger alert-dismissible fade show">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong>Max Image Size is 1024kb!</strong> Try different Image.
+                                </div>';
+
+                            }
+                
+                        else
+                            {
+                            $sql = "INSERT INTO fooditem(Res_id,FName,Description,price,img) VALUE('".$_POST['res_name']."','".$_POST['d_name']."','".$_POST['about']."','".$_POST['price']."','".$fnew."')";  // store the submited data ino the database :images
+                            mysqli_query($db, $sql); 
+                            move_uploaded_file($temp, $store);
+
+                            if($mysqli_query=True){
+                                echo "<script>alert('Successfully added!');
+                                window.location.href='add_food_item.php';</script>";
+                            }
+                    
+                            $success = 	'<div class="alert alert-success alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>Congrats!</strong> New Dish Added Successfully.
+                            </div>';
+                        
+            
+                            }
+                        }
+                        elseif($extension == '')
+                            {
+                            $error = '<div class="alert alert-danger alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>select image</strong>
+                        </div>';
+                            }
+                            else
+                            {
+                            
+                            $error = 	'<div class="alert alert-danger alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>invalid extension!</strong>png, jpg, Gif are accepted.
+                            </div>';
+						
+					}               
+	    }
+}
+
+?>
+
+
 <head>
 
 
@@ -42,50 +120,84 @@
     </div>
 
                     <div class="content">
-                        <form role="form" action="add_menu_item.php" method="POST" enctype="multipart/form-data">
-
-                            <div class="form-group">
-                                <label>Restaurant ID</label>
-                                <select name="restaurant" class="form-control">
-                                    <option selected="selected"></option>
-
-                                    <?php
-                                    require_once('../../connection/connect.php');
-                                    $query = $conn->query("SELECT * FROM seller");
-
-                                    while ($result = $query->fetch_assoc()) {
-                                        echo "<option value='" . $result['res_id'] . "'>" . $result['storename'] . "</option>";
-                                        //$result['id'] <= id from the resturant table
-                                        //$result['resturant_name'] <= resturant name from the resturant table
-                                    }
-
-                                    $conn->close();
-                                    ?> 
-                                </select>
+                        
+                        <div class="col-lg-12">
+                        <div class="card card-outline-primary">
+                            <div class="card-header">
+                                <h4 class="m-b-0 text-white">Add Food Items</h4>
                             </div>
-                            <div class="form-group">
-                                <label>Item Name</label>
-                                <input name="item" class="form-control" placeholder="Enter item name">
+                            <div class="card-body">
+                                <form action="add_food_item.php" method='post'  enctype="multipart/form-data">
+                                    <div class="form-body">
+                                       
+                                        <hr>
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Food Name</label>
+                                                    <input type="text" name="d_name" class="form-control" placeholder="Enter Item Name">
+                                                   </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group has-danger">
+                                                    <label class="control-label">Description</label>
+                                                <input type="text" name="about" class="form-control form-control-danger" placeholder="Description">
+                                                    </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Price </label>
+                                                    <input type="text" name="price" class="form-control" placeholder="LKR ">
+                                                   </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group has-danger">
+                                                    <label class="control-label">Image</label>
+                                                    <input type="file" name="file"  id="lastName" class="form-control form-control-danger" placeholder="12n">
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <!--/row-->
+										
+                                            <!--/span-->
+                                        <div class="row">											
+											 <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Select Restaurant</label>
+													<select name="res_name" class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                                                        <option>--Select Restaurant--</option>                                                        
+                                                        <?php
+                                                            require_once('../../connection/connect.php');
+                                                            $query = $db->query("SELECT * FROM seller");
+
+                                                            while ($result = $query->fetch_assoc()) {
+                                                                echo "<option value='" . $result['res_id'] . "'>" . $result['storename'] . "</option>";
+                                                                //$result['id'] <= id from the resturant table
+                                                                //$result['resturant_name'] <= resturant name from the resturant table
+                                                            }
+
+                                                            $db->close();
+                                                            ?> 
+                                                     </select>
+                                                </div>
+                                            </div>											
+                                        </div>                                   
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <input type="submit" name="submit" class="btn btn-success" value="save"> 
+                                        <a href="add_food_item.php" class="btn btn-inverse"><button type="reset" value="Reset">Cancel</button></a>
+                                        <a href="view_food_item.php"><button type="button" class="button">View Items</button></a>
+                                    </div>
+                                </form>
                             </div>
-
-                            <div class="form-group">
-                                <label>Details</label>
-                                <input name="details" class="form-control" placeholder="Enter details">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Price</label>
-                                <input name="price" type="number" class="form-control" placeholder="Enter Price">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Image</label>
-                                <input id="uploadBtn" type="file" class="upload" name="image" accept="image/*" />
-                            </div>
-
-                            <input type="submit" class="btn btn-default" name="btn-itmadd" value="Submit">
-
-                        </form>
+                        </div>
                     </div>
 
     <?php include('foot.php'); ?>

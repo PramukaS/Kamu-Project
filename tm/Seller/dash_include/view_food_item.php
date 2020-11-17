@@ -81,25 +81,25 @@
 
             <table id="customers">
                 <tr>
-                    <th>Item_id</th>
-                    <th>Res_id</th>
-                    <th>Item_name</th>
-                    <th>Details</th>
+                    <th>Item ID</th>
+                    <th>Restaurant ID</th>
+                    <th>Item Name</th>
+                    <th>Description</th>
                     <th>Price</th>
-                    <th>Image</th>
+                    <!-- <th>Image</th> -->
                 </tr>
                 <?php
                 require_once('../../connection/connect.php');
-                $query = $db->query("SELECT * FROM fooditems");
+                $query = $db->query("SELECT * FROM fooditem");
                 while ($result = $query->fetch_assoc()) {
                 ?>
                     <tr>
                         <td><?php echo $result['Item_id'] ?></td>
                         <td><?php echo $result['Res_id'] ?></td>
-                        <td><?php echo $result['Item_name'] ?></td>
-                        <td><?php echo $result['Details'] ?></td>
-                        <td><?php echo $result['Price'] ?></td>
-                        <td><?php echo $result['Image'] ?></td>
+                        <td><?php echo $result['FName'] ?></td>
+                        <td><?php echo $result['Description'] ?></td>
+                        <td><?php echo $result['price'] ?></td>
+                        <!-- <td><?php echo $result['img'] ?></td> -->
                     </tr>
                 <?php }
                 $db->close();

@@ -13,7 +13,7 @@ require_once("connect.php");
         $result=$con->query($sql);
 
         if($result=True){
-            echo "<script>alert('There are no fields to generate a report');
+            echo "<script>alert('Successfully Sent your message!');
             window.location.href='contactus.php';</script>";
         }else{
             echo "error".$sql."<br>".$conn->error;

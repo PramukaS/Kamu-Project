@@ -73,6 +73,11 @@ p{
     line-height: 60px;
 } 
 
+.col-2 h3{
+    font-size: 30px;
+    line-height: 60px;
+} 
+
 .btn{
     display: inline-block;
     background: #5CDB95;

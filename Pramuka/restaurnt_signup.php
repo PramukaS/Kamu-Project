@@ -14,7 +14,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/logstyle.css">  
     <title>Seller Signup</title>
@@ -48,15 +48,15 @@
 							<h2 class="title">Signup as Restaurant</h2>
 						</div>
                         <lable>Store Name</lable>
-                            <input type="storeName" name="strName" value="" autocomplete="off" placeholder="Store Name" >
+                            <input type="storeName" name="strName" value="" autocomplete="off" placeholder="Store Name" required>
                         <lable>Store Addresss</lable>
-                            <input type="storeAddress" name="strAddress" value="" autocomplete="off" placeholder="Store Address" >
+                            <input type="storeAddress" name="strAddress" value="" autocomplete="off" placeholder="Store Address" required>
                         <lable>First Name</lable>
-                            <input type="firstName" name="fname" value="" autocomplete="off" placeholder="First Name" >
+                            <input type="firstName" name="fname" value="" autocomplete="off" placeholder="First Name" required>
                         <lable>Last Name</lable>
-                            <input type="lastName" name="lname" value="" autocomplete="off" placeholder="Last Name" >
+                            <input type="lastName" name="lname" value="" autocomplete="off" placeholder="Last Name" required>
                         <lable>Contact Number</lable>
-                            <input type="tel" name="contactNo" value="" autocomplete="off" placeholder="+94|Contact Number" >
+                            <input type="tel" name="contactNo" value="" autocomplete="off" placeholder="+94|Contact Number" required>
                         <lable>Email</lable>
                             <input type="email" name="email" value="" autocomplete="off" placeholder="Email" ><br>
                         <lable>Store Type</lable>

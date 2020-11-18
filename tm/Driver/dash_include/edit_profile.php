@@ -201,7 +201,9 @@
                                                 value="" placeholder="Enter your New Username" required><br>
                                         <input class="button" type="submit" name='submit2' value="Submit" size="25">
                                 </div>
-
+                                <label>Driver ID</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;"></a> 
+                        <input class="form-control" type="text" step=0.1 name="name" size="50"
+                                    value="" placeholder="568" disabled><br> 
                         <label>Password</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
                             <input class="form-control" type="password" name="password" size="3"
                                     value="" placeholder="**********" disabled><br>

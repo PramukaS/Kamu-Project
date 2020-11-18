@@ -29,7 +29,11 @@
         }
 
         #fooditems tr td c{
-            margin-left:40%;
+            margin-left:10%;
+            float:left;
+        }
+        #fooditems tr td v{
+            margin-left:5%;
             float:left;
         }
         #fooditems th {
@@ -93,15 +97,17 @@
             </div>
         </div>
     </div>
+    
     <div class="content">  
                 <div table>
 
                 <table id="fooditems">
                     <tr>
                         <td><c><div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20colombo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href=""></a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></c></td>
+                        <td><b><label>Enter Location URL:</label></b>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <c><a href="#"><button type="button" class="button"><b>Update My location</b></button></a><c></td>
                     </tr>
-                        <td> <c><a href="#"><button type="button" class="button"><b>Update My location</b></button></a><c></td>
-                        </tr>
                 
                 </table>
                 </div>

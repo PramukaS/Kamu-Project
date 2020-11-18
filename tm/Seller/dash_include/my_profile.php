@@ -209,6 +209,10 @@
                         <img  src="../img/seller_icon.png" width="100px" style="float:right;" alt="user" width="50px"><br><br><br><br><br>
                     </div>
                     <div class="form-group">
+
+                        <label>Seller ID</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;"></a> 
+                            <input class="form-control" type="text" step=0.1 name="name" size="50"
+                                    value="" placeholder="759" disabled><br> 
                         <label>Store Name</label><a onclick="myFunction()" href="javascript:void(0);" style="float:right;" value="1">Edit</a> 
                             <input id = "username" class="form-control" type="text" name="username" size="50"
                                 value="" autocomplete="off" placeholder="Mathara bath kade " disabled><br>

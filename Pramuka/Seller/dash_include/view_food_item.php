@@ -43,7 +43,7 @@
         #fooditems th {
             padding-top: 12px;
             padding-bottom: 12px;
-            text-align: left;
+            text-align: center;
             background-color: #ac3632;
             color: white;
         }
@@ -51,8 +51,8 @@
             padding-top: 12px;
             border-collapse: collapse;
             padding-bottom: 12px;
-            text-align: left;
-            background-color: #ac3632;
+            text-align: center;
+            background-color: brown;
             color: white;
 
         }
@@ -100,7 +100,7 @@
                 </tr>
                 <?php
                 require_once('../../connect.php');
-                $query = $db->query("SELECT * FROM fooditem");
+                $query = $con->query("SELECT * FROM fooditem");
                 while ($result = $query->fetch_assoc()) {
                 ?>
                     <tr>
@@ -112,7 +112,7 @@
                         <!-- <td><?php echo $result['img'] ?></td> -->
                     </tr>
                 <?php }
-                $db->close();
+                $con->close();
                 ?>
                          <tr>
                         <td></td>

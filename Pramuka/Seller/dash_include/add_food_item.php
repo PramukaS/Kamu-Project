@@ -41,7 +41,7 @@ if(isset($_POST['submit']))           //if upload btn is pressed
                         else
                             {
                             $sql = "INSERT INTO fooditem(Res_id,FName,Description,price,img) VALUE('".$_POST['res_name']."','".$_POST['d_name']."','".$_POST['about']."','".$_POST['price']."','".$fnew."')";  // store the submited data ino the database :images
-                            mysqli_query($db, $sql); 
+                            mysqli_query($con, $sql); 
                             move_uploaded_file($temp, $store);
 
                             if($mysqli_query=True){
@@ -285,7 +285,7 @@ if(isset($_POST['submit']))           //if upload btn is pressed
                                         <option>--Select Restaurant--</option>                                                        
                                         <?php
                                         require_once('../../connect.php');
-                                        $query = $db->query("SELECT * FROM seller");
+                                        $query = $con->query("SELECT * FROM seller");
 
                                         while ($result = $query->fetch_assoc()) {
                                         echo "<option value='" . $result['res_id'] . "'>" . $result['storename'] . "</option>";
@@ -293,7 +293,7 @@ if(isset($_POST['submit']))           //if upload btn is pressed
                                         //$result['resturant_name'] <= resturant name from the resturant table
                                         }
 
-                                        $db->close();
+                                        $con->close();
                                         ?> 
 
                                         </select><br>

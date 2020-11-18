@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2020 at 02:26 PM
+-- Generation Time: Nov 18, 2020 at 07:54 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -130,13 +130,9 @@ CREATE TABLE `fooditem` (
 --
 
 INSERT INTO `fooditem` (`Item_id`, `Res_id`, `FName`, `Description`, `price`, `img`) VALUES
-(1, 1, 'Egg Rice', 'Full rice for 2 person', '600.00', '5fb3aedf00994.jpg'),
-(2, 1, 'Egg Rice', 'Full rice for 2 person', '600.00', '5fb3aedf00994.jpg'),
-(3, 2, 'KaluPolMaluwa', 'Kosata', '300.00', '5fb3af7e93311.png'),
-(4, 2, 'KaluPolMaluwa', 'Kosata', '300.00', '5fb3af7e93311.png'),
-(5, 3, 'MaluPan', '*12', '300.00', '5fb3afd6a5937.jpg'),
-(6, 3, 'MaluPan', '*12', '300.00', '5fb3b01b7883b.jpg'),
-(7, 1, 'kiribath', 'epa knna', '0.00', '5fb3b0381f64c.jpg');
+(1, 2, 'Grilled Chicken Sandwich', '370 calories, 34 grams protein, 10 grams fat. They keep the fat low with a smokey honey mustard dressing and a healthy spring mix of greens.', '300.00', '5fb4c35dab756.jpg'),
+(2, 1, 'Fried Rice', 'Shrimp fried rice, 1 cup Calories: 321 •Carbs: 42g •Fat: 12g •Protein: 11g', '450.00', '5fb4c41636095.jpg'),
+(3, 2, 'Pork Fried Rice', 'Pork Fried Rice, 1 cup Calories: 335 •Carbs: 42g •Fat: 13g •Protein: 12g', '500.00', '5fb4c45656557.jpg');
 
 -- --------------------------------------------------------
 
@@ -256,9 +252,9 @@ CREATE TABLE `seller` (
 --
 
 INSERT INTO `seller` (`res_id`, `storename`, `storeaddress`, `firstname`, `lastname`, `phonenumber`, `email`, `businesstype`) VALUES
-(1, 'Mathara bath kade', '113/1,1', 'Pathmika', 'Weerarathna', 9865375, '23@gmail.com', 'Restaurant'),
-(2, 'dansala', '123,ragama', 'saman', 'perera', 123654, 'dansala@com', 'Liquorstore'),
-(3, 'sri vihar', '45,thunmulla', 'chamath', 'nishantha', 94123689, 'sarath@com', 'Conveniencestore');
+(1, 'Mathara bath kade', '113/1,Horana,Kaluthara', 'Pathmika', 'Weerarathna', 723685591, 'mathara@gmail.com', 'Restaurant'),
+(2, 'dansala', '123,ragama', 'saman', 'perera', 116985736, 'dansala@com', 'Restaurant'),
+(3, 'sri vihar', '45,thunmulla', 'chamath', 'nishantha', 341236896, 'sarath@com', 'Conveniencestore');
 
 -- --------------------------------------------------------
 
@@ -407,7 +403,7 @@ ALTER TABLE `food`
 -- AUTO_INCREMENT for table `fooditem`
 --
 ALTER TABLE `fooditem`
-  MODIFY `Item_id` int(222) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Item_id` int(222) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `post`
@@ -444,6 +440,16 @@ ALTER TABLE `transaction`
 --
 ALTER TABLE `users`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `fooditem`
+--
+ALTER TABLE `fooditem`
+  ADD CONSTRAINT `fooditem_ibfk_1` FOREIGN KEY (`Res_id`) REFERENCES `seller` (`res_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -7,7 +7,7 @@
             <div class="dropdown">
                 <button class="dropbtn"><img  src="../img/seller_icon.png" alt="user" width="50px"></button>
                 <div class="dropdown-content">
-                    <a href="edit_restaurant_details.php">My Profile</a>
+                    <a href="my_profile.php">My Profile</a>
                     <a href="../../logout.php">Log Out</a>
                 </div>
             </div>
@@ -26,7 +26,7 @@
         </li>
         <li>Order Details
             <ul>
-                <li><m><a href="view_order.php">View Order details</a></m></li>
+                <li><a href="view_order.php">View Order details</a></li>
                 <li><a href="order_history.php">Order History</a></li>
             </ul>
         </li>

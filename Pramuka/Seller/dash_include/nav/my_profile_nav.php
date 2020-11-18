@@ -16,7 +16,7 @@
 <div class="sidebar">
     <ul>
         <li> <a href="../dash.php">DASHBOARD</a></li>
-        <li><a href="edit_restaurant_details.php">Edit Restaurant Details</a></li>
+        <li><a href="edit_restaurant_details.php">Edit Restaurant Details</m></li>
         <li> Food Menu
         <ul style="display: none;">
                 <li><a href="add_food_item.php">Add Food Items</a></li>
@@ -25,9 +25,9 @@
             </ul>
         </li>
         <li>Order Details
-            <ul>
+            <ul style="display: none;">
                 <li><a href="view_order.php">View Order details</a></li>
-                <li><m><a href="order_history.php">Order History</a></m></li>
+                <li><a href="order_history.php">Order History</a></li>
             </ul>
         </li>
         <li><a href="contact_admin.php">Contact Administrator</a></li>

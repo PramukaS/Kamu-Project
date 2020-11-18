@@ -56,6 +56,15 @@
             color: white;
 
         }
+        .button1{
+            padding-top: 12px;
+            border-collapse: collapse;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #f2f2f2;
+            color: #ac3632;
+
+        }
     </style>
 </head>
 
@@ -117,8 +126,8 @@
                          <tr>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td> <a href="add_food_item.php"><button type="button" class="button">Add Food Items</button></a></td>
+                        <td> <a href="edit_food_item.php"><button type="button" class="button1">Edit Food Items</button></a></td>
+                        <td><a href="add_food_item.php"><button type="button" class="button">Add Food Items</button></a></td>
                     </tr>
                
             </table>

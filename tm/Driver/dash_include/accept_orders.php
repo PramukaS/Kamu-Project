@@ -34,6 +34,31 @@
             margin: 4px 2px;
             cursor: pointer;
             }
+            .button1 {
+            background-color: rgb(88, 251, 7);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            }
+            
+            .button2 {
+            background-color: rgb(121, 125, 119);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            }
             
 
         </style>
@@ -98,10 +123,7 @@
                 <td><i><u>Map URL</i></u></td>
                 <td>Cash-On Delivery</td>
                 <td>350.00</td>
-                <td><select>
-                        <option value=""><button type="button" class="button">Accept</button></option>
-                        <option value=""><button type="button" class="button">Cancel</button></option>
-                    </select"> </td>
+                <td><button type="button" class="button1">Accept</button><button type="button" class="button2">Reject</button> </td>
             </tr>
             <tr>
                 <td>Nelum Hotel</td>
@@ -112,10 +134,7 @@
                 <td><i><u>Map URL</i></u></td>
                 <td>Card-Payment</td>
                 <td>1450.00</td>
-                <td><select>
-                        <option value=""><button type="button" class="button">Accept</button></option>
-                        <option value=""><button type="button" class="button">Cancel</button></option>
-                    </select"> </td>
+                <td><button type="button" class="button1">Accept</button><button type="button" class="button2">Reject</button> </td>
             </tr>
             <tr>
                 <td>Wasana Restaurant</td>
@@ -126,10 +145,7 @@
                 <td><i><u>Map URL</i></u></td>
                 <td>Card-Payment</td>
                 <td>750.00</td>
-                <td><select>
-                        <option value=""><button type="button" class="button">Accept</button></option>
-                        <option value=""><button type="button" class="button">Cancel</button></option>
-                    </select"> </td>
+                <td><button type="button" class="button1">Accept</button><button type="button" class="button2">Reject</button> </td>
             </tr>
             <tr>
                 <td></td>

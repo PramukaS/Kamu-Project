@@ -1,33 +1,18 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
-
-        <style>
-        table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 75%;
-        }
-
-        td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-        }
-        </style>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/dash.css">
-
-    <title>Edit restaurant Details</title>
-    <style>
+    <title>Driver Profile</title>
+        <style>
 
         #myDIV {
             width: 100%;
@@ -52,7 +37,7 @@
             background-color: rgb(226, 230, 231);
             margin:10px;
         }
-        /* food form css      */
+   /* food form css      */
         .food-form .form {
             align-self: center;
             width:50%;
@@ -174,43 +159,42 @@
 
 </head>
 <body>
-<div class="seller-dashboard">
-        <?php include('nav/edit_restaurant_details_nav.php'); ?>
+    <div class="driver-dashboard">
+        <?php include('nav/my_profile_nav.php'); ?>
         <div class="content">
             <div class="container">
-                <a href="view_order.php" class="card" id="card1" style="display: block;">
-                 <i class="fas fa-sort-amount-up-alt"></i>
+                <a href="accept_orders.php" class="card" id="card1" style="display: block;">
+                    <i class="fas fa-inbox"></i>
                     <div class="container">
-                        <h4><b>Orders</br>3</b ></h4>
+                        <h4><b>Accept Orders</br>3</b ></h4>
                     </div>
                 </a>
-                <a href="view_food_item.php" class="card" id="card2" style="display: block;">
-                    <i class="fas fa-cloud-meatball"></i>
+                <a href="delivery_history.php" class="card" id="card2" style="display: block;">
+                    <i class="fas fa-list-alt"></i>
                     <div class=" container">
-                        <h4><b>Food Items</br>12</b></h4>
+                        <h4><b>Delivery History</br>3</b></h4>
                     </div>
                  </a>
-                <a href="order_history.php" class="card" id="card3" style="display: block;">
-                    <i class="fas fa-history"></i>
+                <a href="earnings.php" class="card" id="card3" style="display: block;">
+                    <i class="fas fa-money-check-alt"></i>
                     <div class="container">
-                        <h4><b>Order Histroy</br>22</b></h4>
+                        <h4><b>Earnings</br>350.00</b></h4>
                     </div>
                 </a>
             </div>
         </div>
-</div>
-
-<div class="content">  
+    </div>
+    <div class="content">  
             <div class="food-form form-container">
-                <h2 style="text-transform: capitalize;text-align:center;">Edit Restaurant Details </h2><br>
+                <h2 style="text-transform: capitalize;text-align:center;">My Profile</h2><br>
                 <form class="form" action="" method="post">
                     <div class="form-group">
-                        <img  src="../img/seller_icon.png" width="100px" style="float:right;" alt="user" width="50px"><br><br><br><br><br>
+                        <img  src="../img/driver_icon.png" width="100px" style="float:right;" alt="user" width="50px"><br><br><br><br><br>
                     </div>
                     <div class="form-group">
-                        <label>Store Name</label><a onclick="myFunction()" href="javascript:void(0);" style="float:right;" value="1">Edit</a> 
+                        <label>Username</label><a onclick="myFunction()" href="javascript:void(0);" style="float:right;" value="1">Edit</a> 
                             <input id = "username" class="form-control" type="text" name="username" size="50"
-                                value="" autocomplete="off" placeholder="Mathara bath kade " disabled><br>
+                                value="" autocomplete="off" placeholder="Nishantha P " disabled><br>
 
                                 <div id="myDIV"style="display:none;">
                                         <label>New Username</label>
@@ -219,9 +203,9 @@
                                         <input class="button" type="submit" name='submit2' value="Submit" size="25">
                                 </div>
 
-                        <label>Store Location</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
+                        <label>Password</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
                             <input class="form-control" type="password" name="password" size="3"
-                                    value="" placeholder="42,kohuwala" disabled><br>
+                                    value="" placeholder="**********" disabled><br>
 
                                     <div id="myDIV1"style="display:none;">
                                         <label>New Password</label>
@@ -240,23 +224,20 @@
                                 </div>
 
 
-                        <label>Seller Name</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
+                        <label>License Number</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
                             <input class="form-control" type="text" step=0.1 name="name" size="50"
-                                    value="" placeholder="Pathmika Weerarathna" disabled><br>
+                                    value="" placeholder="986570030" disabled><br>
                         <label>Contact Number</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
                             <input class="form-control" type="number" name="cno" size="10"
                                     value="" placeholder="0773456467"disabled><br>
-                        <label>E-mail</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
-                            <input class="form-control" type="number" name="cno" size="10"
-                                    value="" placeholder="mathraba@gmail.com"disabled><br>
-                                    
-                        <label>Store Validation Documents</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
+                        <label>Upload a copy of License</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
                             <input class="form-control" type="file" name="medical" value=""  ><br>                                         
                     </div>
                 </form>
             </div>
-    </div>        
+    </div>   
 
-    <?php include('foot.php'); ?>   
+
+    <?php include('foot.php'); ?>
 </body>
 </html>

@@ -21,7 +21,7 @@
         background-color: #dddddd;
         }
         .button {
-            background-color: blue;
+            background-color: #ac3632;
             border: none;
             color: white;
             padding: 15px 32px;

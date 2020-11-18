@@ -17,7 +17,7 @@
     <ul>
         <li> <a href="../dash.php">DASHBOARD</a></li>
         <li><a href="edit_profile.php">Edit Profile</a></li>
-        <li><m><a href="update_location.php">Update Location</a><m></li>
+        <li><a href="update_location.php">Update Location</a></li>
         <li>Orders
             <ul style="display: none;">
                 <li><a href="accept_orders.php">Order Inbox</a></li>

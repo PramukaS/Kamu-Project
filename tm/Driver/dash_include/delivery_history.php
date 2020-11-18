@@ -117,7 +117,7 @@
                 <td></td>
                 <td></td>
                 <th></th>
-                <td><a href="earnings.php"><button type="button" class="button">View</button></a></td>
+                <td><a href="earnings.php"><button type="button" class="button">View Earnings</button></a></td>
 
              </tr>
 

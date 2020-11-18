@@ -13,38 +13,48 @@
 
     <title>View Food Items</title>
     <style>
+        
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 75%;
             }
 
-        #customers {
+        #fooditems {
             font-family: Arial, Helvetica, sans-serif;
             border-collapse: collapse;
-            width: 100%;
+            width: 75%;
         }
 
-        #customers td,
-        #customers th {
+        #fooditems td,
+        #fooditems th {
             border: 1px solid #ddd;
             padding: 8px;
         }
 
-        #customers tr:nth-child(even) {
+        #fooditems tr:nth-child(even) {
             background-color: #f2f2f2;
         }
 
-        #customers tr:hover {
+        #fooditems tr:hover {
             background-color: #ddd;
         }
 
-        #customers th {
+        #fooditems th {
             padding-top: 12px;
             padding-bottom: 12px;
             text-align: left;
-            background-color: #4CAF50;
+            background-color: #ac3632;
             color: white;
+        }
+        .button{
+            padding-top: 12px;
+            border-collapse: collapse;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #ac3632;
+            color: white;
+
         }
     </style>
 </head>
@@ -79,23 +89,23 @@
     <div class="content">
         <div table>
 
-            <table id="customers">
+            <table id="fooditems">
                 <tr>
                     <th>Item ID</th>
-                    <th>Restaurant ID</th>
+                    <!-- <th>Restaurant ID</th> -->
                     <th>Item Name</th>
                     <th>Description</th>
                     <th>Price</th>
                     <!-- <th>Image</th> -->
                 </tr>
                 <?php
-                require_once('../../connection/connect.php');
+                require_once('../../connect.php');
                 $query = $db->query("SELECT * FROM fooditem");
                 while ($result = $query->fetch_assoc()) {
                 ?>
                     <tr>
                         <td><?php echo $result['Item_id'] ?></td>
-                        <td><?php echo $result['Res_id'] ?></td>
+                        <!-- <td><?php echo $result['Res_id'] ?></td> -->
                         <td><?php echo $result['FName'] ?></td>
                         <td><?php echo $result['Description'] ?></td>
                         <td><?php echo $result['price'] ?></td>
@@ -104,6 +114,13 @@
                 <?php }
                 $db->close();
                 ?>
+                         <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td> <a href="add_food_item.php"><button type="button" class="button">Add Food Items</button></a></td>
+                    </tr>
+               
             </table>
         </div>
     </div>

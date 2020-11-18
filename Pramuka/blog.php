@@ -53,12 +53,10 @@
 			To freeze an unbaked lasagna: Line the pan with foil before assembling, then assemble the lasagna as directly. Let cool completely, and then freeze until solid. Once frozen, lift the frozen lasagna block from the casserole dish, wrap it in more foil, then freeze for up to a month.<br><br>
 			To reheat an unbaked frozen lasagna: Remove the lasagna from the freezer and unwrap all the layers of foil. Transfer to the original casserole dish, cover, and let it thaw in the fridge overnight. Once thawed, bake as directed.
 			To freeze baked lasagna: Line the pan with foil before assembling, then assemble and bake as directed. Let it cool completely, then freeze until solid. Once frozen, lift the frozen lasagna block from the casserole dish, wrap it in more foil, then freeze for up to a month. <br><br>
-			Bake until bubbly and you’re ready to eat!</span></p>
-			
-			</div>
-			<button onclick="myFunction()" id="myBtn2">More</button>
-			
+			Bake until bubbly and you’re ready to eat!</span></p></div>
 
+			<br><button onclick="myFunction()" id="myBtn2">More</button>
+			
 			<img src="images/blog/Food3.jpg">
 			<div class="text">
 			<h3>Butter garlic crab <span style="font-size: 16px">  &#8287 &#8287 &#8287  &#8287 &#8287 &#8287 &#8287 &#8287 &#8287 Date:- 07th Nov</span></h3>
@@ -72,9 +70,7 @@
 			To freeze baked lasagna: Line the pan with foil before assembling, then assemble and bake as directed. Let it cool completely, then freeze until solid. Once frozen, lift the frozen lasagna block from the casserole dish, wrap it in more foil, then freeze for up to a month. <br><br>
 			Bake until bubbly and you’re ready to eat!</span></p></div>
 			
-			<button onclick="myFunction()" id="myBtn3">More</button>
-
-
+			<br><button onclick="myFunction()" id="myBtn3">More</button>
 			
 			<img src="images/blog/Food4.jpg">
 			<div class="text"><h3>Laksa<span style="font-size: 16px">  &#8287 &#8287 &#8287  &#8287 &#8287 &#8287 &#8287 &#8287 &#8287 Date:- 04th Nov</span></h3>
@@ -87,7 +83,7 @@
 			To freeze baked lasagna: Line the pan with foil before assembling, then assemble and bake as directed. Let it cool completely, then freeze until solid. Once frozen, lift the frozen lasagna block from the casserole dish, wrap it in more foil, then freeze for up to a month. <br><br>
 			Bake until bubbly and you’re ready to eat!</span></p></div>
 
-			<button onclick="myFunction()" id="myBtn4">More</button>
+			<br><button onclick="myFunction()" id="myBtn4">More</button>
 
 			<img src="images/blog/Food5.jpg">
 			<div class="text"><h3>Confit de canard<span style="font-size: 16px">  &#8287 &#8287 &#8287  &#8287 &#8287 &#8287 &#8287 &#8287 &#8287 Date:- 04th Nov</span></h3>
@@ -101,7 +97,7 @@
 			To freeze baked lasagna: Line the pan with foil before assembling, then assemble and bake as directed. Let it cool completely, then freeze until solid. Once frozen, lift the frozen lasagna block from the casserole dish, wrap it in more foil, then freeze for up to a month. <br><br>
 			Bake until bubbly and you’re ready to eat!</span></p></div>
 
-			<button onclick="myFunction()" id="myBtn4">More</button>
+			<br><button onclick="myFunction()" id="myBtn4">More</button>
 
 			<img src="images/blog/Food6.jpg">
 			<div class="text"><h3>Boeuf bourguignon<span style="font-size: 16px">  &#8287 &#8287 &#8287  &#8287 &#8287 &#8287 &#8287 &#8287 &#8287 Date:- 04th Nov</span></h3>
@@ -114,7 +110,7 @@
 			To freeze baked lasagna: Line the pan with foil before assembling, then assemble and bake as directed. Let it cool completely, then freeze until solid. Once frozen, lift the frozen lasagna block from the casserole dish, wrap it in more foil, then freeze for up to a month. <br><br>
 			Bake until bubbly and you’re ready to eat!</span></p></div>
 
-			<button onclick="myFunction()" id="myBtn4">More</button>
+			<br><button onclick="myFunction()" id="myBtn4">More</button>
 		</div>
 		
 		<script>

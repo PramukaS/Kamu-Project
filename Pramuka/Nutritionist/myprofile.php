@@ -58,9 +58,9 @@
                                     value="" placeholder="Shifna shafeek" disabled><br>
                         <label>Contact Number</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
                             <input class="form-control" type="number" name="cno" size="10"
-                                    value="" placeholder="0773456467"disabled><br>
+                                    value="" placeholder="0773456467" disabled><br>
                         <label>Medical Certificate</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
-                            <input class="form-control" type="file" name="medical" value=""  ><br>                                         
+                            <input class="form-control" type="file" name="medical" value="" disabled ><br>                                         
                     </div>
                 </form>
             </div>

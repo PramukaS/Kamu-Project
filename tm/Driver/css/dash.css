@@ -6,10 +6,6 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background-image: url('../img/delivery_bg.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     background-color: lightyellow;
 }
 
@@ -114,7 +110,7 @@ body{
 
 .driver-dashboard .sidebar ul li ul li a {
     border-radius: 10%;
-    background-color: #86a5be;
+    background-color: #125389;
     padding: 10px 100px 10px 5px;
     text-align: left;
     color: #000;
@@ -163,7 +159,7 @@ body{
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2);
-  border-radius: 30%;
+  border-radius: 10%;
   transition: 0.3s;
   padding: 40px 90px;
   fill-opacity: 40%;

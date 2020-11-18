@@ -7,8 +7,8 @@
             <div class="dropdown">
                 <button class="dropbtn"><img  src="img/seller_icon.png" alt="user" width="50px"></button>
                 <div class="dropdown-content">
-                    <a href="#">My Profile</a>
-                    <a href="#">Log Out</a>
+                    <a href="dash_include/edit_restaurant_details.php">My Profile</a>
+                    <a href="../logout.php">Log Out</a>
                 </div>
             </div>
     </div>

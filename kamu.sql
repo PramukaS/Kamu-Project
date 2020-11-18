@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2020 at 03:39 PM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.8
+-- Generation Time: Nov 18, 2020 at 07:54 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -49,6 +49,49 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `usertype`, `emailid`) VAL
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contactus`
+--
+
+CREATE TABLE `contactus` (
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `subject` varchar(50) NOT NULL,
+  `message` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contactus`
+--
+
+INSERT INTO `contactus` (`name`, `email`, `subject`, `message`) VALUES
+('Anjali', 'anjali@gmail.com', 'Register as Delivery person', 'can i get more information about registering as a delivery person');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `deliverydriver`
+--
+
+CREATE TABLE `deliverydriver` (
+  `username` varchar(50) NOT NULL,
+  `nic` varchar(10) NOT NULL,
+  `license` varchar(20) NOT NULL,
+  `contact` int(10) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `deliverydriver`
+--
+
+INSERT INTO `deliverydriver` (`username`, `nic`, `license`, `contact`, `email`, `password`) VALUES
+('Ramesh', '667589123v', '2587469321', 789564883, 'Rama@gmail.com', 'rama@123'),
+('L.K.Gunawardana', '772564138v', '8956231596', 777584861, 'lkg@gmail.com', 'lkg123');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `food`
 --
 
@@ -66,6 +109,74 @@ CREATE TABLE `food` (
 
 INSERT INTO `food` (`id`, `foodName`, `calories`, `protein`, `fat`) VALUES
 (1, 'Barley', 346, 9, 1.4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fooditem`
+--
+
+CREATE TABLE `fooditem` (
+  `Item_id` int(222) NOT NULL,
+  `Res_id` int(222) NOT NULL,
+  `FName` varchar(222) NOT NULL,
+  `Description` varchar(222) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `img` varchar(222) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `fooditem`
+--
+
+INSERT INTO `fooditem` (`Item_id`, `Res_id`, `FName`, `Description`, `price`, `img`) VALUES
+(1, 2, 'Grilled Chicken Sandwich', '370 calories, 34 grams protein, 10 grams fat. They keep the fat low with a smokey honey mustard dressing and a healthy spring mix of greens.', '300.00', '5fb4c35dab756.jpg'),
+(2, 1, 'Fried Rice', 'Shrimp fried rice, 1 cup Calories: 321 •Carbs: 42g •Fat: 12g •Protein: 11g', '450.00', '5fb4c41636095.jpg'),
+(3, 2, 'Pork Fried Rice', 'Pork Fried Rice, 1 cup Calories: 335 •Carbs: 42g •Fat: 13g •Protein: 12g', '500.00', '5fb4c45656557.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nutritionist`
+--
+
+CREATE TABLE `nutritionist` (
+  `username` varchar(50) NOT NULL,
+  `nic` varchar(10) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `nutritionist`
+--
+
+INSERT INTO `nutritionist` (`username`, `nic`, `status`, `email`) VALUES
+('Amali Finseka', '772564138v', 'Bsc.in Nutrition & Dietetics.(University of Hawai)', 'amali@gmail.com'),
+('L.K.Gunawardana', '667589123v', 'Bachelor of Science in Nutrition & Dietetics(University of New Mexico, Albuquerque)', 'lkg@gmail.com'),
+('R.B.Rameshkujmar', '667589123v', 'Bsc(Special) in Food Science & Nutrition.(university of Wayamba)', 'rbRamesh@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `post`
+--
+
+CREATE TABLE `post` (
+  `id` int(200) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `message` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`id`, `username`, `email`, `title`, `message`) VALUES
+(13, 'Anjali', 'Anjali@gmail.com', 'Healthy Fish masala ', 'Its my first post like and share . Do you love fish that try this delicious food which is healthy to'),
+(14, 'Nimal ', 'Nimal88@gmail.com', 'Saambar Sooru', 'Rice cooked with lentils, vegetables with a glaze of tamarind juice.It is a Tamil cultural vegetaria');
 
 -- --------------------------------------------------------
 
@@ -126,14 +237,14 @@ INSERT INTO `restaurant` (`id`, `name`, `location`, `description`, `image`) VALU
 --
 
 CREATE TABLE `seller` (
-  `res_id` int(30) NOT NULL,
-  `storename` varchar(30) NOT NULL,
-  `storeaddress` varchar(30) NOT NULL,
-  `firstname` varchar(30) NOT NULL,
-  `lastname` varchar(30) NOT NULL,
-  `phonenumber` int(10) NOT NULL,
-  `email` varchar(20) NOT NULL,
-  `businesstype` varchar(30) NOT NULL
+  `res_id` int(11) NOT NULL,
+  `storename` varchar(50) NOT NULL,
+  `storeaddress` varchar(100) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `phonenumber` int(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `businesstype` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -141,7 +252,9 @@ CREATE TABLE `seller` (
 --
 
 INSERT INTO `seller` (`res_id`, `storename`, `storeaddress`, `firstname`, `lastname`, `phonenumber`, `email`, `businesstype`) VALUES
-(1, 'Laksala', 'Colombo10', 'Pathmika', 'Weerarathna', 774563456, 'pathmika98@gmail.com', 'Restaurant');
+(1, 'Mathara bath kade', '113/1,Horana,Kaluthara', 'Pathmika', 'Weerarathna', 723685591, 'mathara@gmail.com', 'Restaurant'),
+(2, 'dansala', '123,ragama', 'saman', 'perera', 116985736, 'dansala@com', 'Restaurant'),
+(3, 'sri vihar', '45,thunmulla', 'chamath', 'nishantha', 341236896, 'sarath@com', 'Conveniencestore');
 
 -- --------------------------------------------------------
 
@@ -204,9 +317,40 @@ ALTER TABLE `accounts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contactus`
+--
+ALTER TABLE `contactus`
+  ADD PRIMARY KEY (`email`);
+
+--
+-- Indexes for table `deliverydriver`
+--
+ALTER TABLE `deliverydriver`
+  ADD PRIMARY KEY (`nic`);
+
+--
 -- Indexes for table `food`
 --
 ALTER TABLE `food`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fooditem`
+--
+ALTER TABLE `fooditem`
+  ADD PRIMARY KEY (`Item_id`),
+  ADD KEY `Res_id` (`Res_id`);
+
+--
+-- Indexes for table `nutritionist`
+--
+ALTER TABLE `nutritionist`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- Indexes for table `post`
+--
+ALTER TABLE `post`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -256,6 +400,18 @@ ALTER TABLE `food`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `fooditem`
+--
+ALTER TABLE `fooditem`
+  MODIFY `Item_id` int(222) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `post`
+--
+ALTER TABLE `post`
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT for table `registered_users`
 --
 ALTER TABLE `registered_users`
@@ -271,7 +427,7 @@ ALTER TABLE `restaurant`
 -- AUTO_INCREMENT for table `seller`
 --
 ALTER TABLE `seller`
-  MODIFY `res_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `res_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `transaction`
@@ -284,6 +440,16 @@ ALTER TABLE `transaction`
 --
 ALTER TABLE `users`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `fooditem`
+--
+ALTER TABLE `fooditem`
+  ADD CONSTRAINT `fooditem_ibfk_1` FOREIGN KEY (`Res_id`) REFERENCES `seller` (`res_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

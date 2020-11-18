@@ -25,47 +25,38 @@
                 <img src="images/menu.png" class="menu-icon" alt="menu" onclick="menutoggle()">
             </div>
         </div>
-
-        ------
-
     <!------ features categories ------>
 
     <div class="categories">
         <div class="small-container">
-            <div class="row">
-            <?php
-                require_once("connect.php");
+                <?php
+                    require_once("connect.php");
+                    
+                    $id = $_GET['id'];
+                            
+                    if($id != "") {
+                        $sql = "SELECT * FROM restaurant WHERE id='".$id."' LIMIT 1";
+                        $result = $con->query($sql);
 
-                if($_SERVER['REQUEST_METHOD'] == 'GET') {
-                    if(isset($_GET['id']) && preg_replace("#[^0-9]#", "", $_GET['id']) != "") {
-			
-                        $id = preg_replace("#[^0-9]#", "", $_GET['id']);
-                        
-                        if($id != "") {
-                            $query = "SELECT * FROM restaurant WHERE id='".$id."' LIMIT 1";
-                            $query_run = mysqli_query($con,$query);
-                            $check_restaurant = mysqli_num_rows($query_run) > 0;
-
-                        if($check_restaurant){
-                            while($row = mysqli_fetch_array($query_run)){
-            ?>
-
+                    if($result->num_rows>0){
+                        while($row = $result-> fetch_assoc()){
+                ?>
                 <div class="row">
                     <div class="col-2">
-                        <h1>Let's change <br> the way you eat!</h1>
-                        <p> We promote healthy food habits in order to prevent<br>
-                            non-communicable diseases in the Sri Lankan community.</p>
-                        <a href="#SignUp" class="btn">Get Start &#8594;</a> 
+                        <h1><?php echo $row['name']; ?></h1>
+                        <h3><?php echo $row['location']; ?></h3>
+                        <p><?php echo $row['description']; ?> </p><br><br><br><br><br><br>
                     </div>
                     <div class="col-2">
-                            <img src="<?php echo $row['image']; ?>" alt="restaurant image">
+                            <img src="<?php echo $row['image']; ?>" alt="restaurant image" width="450px" style="padding-left:60px;">
                     </div>
                 </div>
 
             <?php
                        
+                        }
                     }
-                }}}}
+                }
                 else{
                     echo "No restaurant found";
                 }

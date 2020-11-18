@@ -5,7 +5,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kamu.lk</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+
+        <style>
+            .boxContainer{
+                display: flex;
+                align-items: right;
+                flex-wrap: wrap;
+                margin-left:300px;
+                margin-bottom:70px;
+                justify-content: space-around;
+                width:500px;
+                height:42px;
+                border: 2px solid;
+                padding:0px 10px;
+                border-radius:50px;
+            }
+            
+            .elementsContainer{
+                width: 100%;
+                height: 100%;
+                vertical-align:middle;
+            }
+        
+            .search{
+                border:none;
+                height:100%;
+                width:100%;
+                padding:0px 5px;
+            }
+            .search:focus{
+                outline:none;
+            }
+        </style>
     </head>
     <body>
         <div class="container"> 
@@ -30,15 +64,28 @@
 
     <div class="categories">
         <div class="small-container">
+        <div class="boxContainer">
+            <table class = "elementsContainer">
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Search Restaurant here" class="search">
+                    </td>
+                    <td>
+                        <span class="material-icons">search</span>
+                    </td>
+                </tr>
+            
+            </table>
+
+        </div>
             <div class="row">
             <?php
                 require_once("connect.php");
-                $query = "SELECT * FROM restaurant ";
-                $query_run = mysqli_query($con,$query);
-                $check_restaurant = mysqli_num_rows($query_run) > 0;
+                $sql = "SELECT * FROM restaurant ";
+                $result = $con->query($sql);
 
-                if($check_restaurant){
-                    while($row = mysqli_fetch_array($query_run)){
+                if($result->num_rows>0){
+                    while($row = $result-> fetch_assoc()){
             ?>
 
                 <div class="col-3">

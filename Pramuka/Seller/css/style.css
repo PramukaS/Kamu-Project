@@ -6,6 +6,7 @@ body {
 
 .bg-img {
     /* The image used */
+    background-image: url("../img/add_restaurant_signup_bg_img.jpg");
   
     /* Control the height of the image */
     min-height: 380px;

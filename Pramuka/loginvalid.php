@@ -36,7 +36,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 				if($row["usertype"] == "admin")
 				{
 					$_SESSION['AdminUser'] = $row["username"];
-					header('Location: admin.php');
+					header('Location: Admin/admin.php');
 				}
 				else if ($row["usertype"] == "nutrition")
 				{

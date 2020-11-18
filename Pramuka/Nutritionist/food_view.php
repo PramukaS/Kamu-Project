@@ -24,7 +24,6 @@
                 <table id="food">
 
                     <tr>
-                        <th>Food id</th>
                         <th>Food name</th>
                         <th>Calories(kcal)</th>
                         <th>Protein(g)</th>
@@ -37,7 +36,6 @@
                         while($row = $result-> fetch_assoc()):
                     ?>
                     <tr>
-                        <td><?php echo $row['id'];?></td>
                         <td><?php echo $row['foodName'];?></td>
                         <td><?php echo $row['calories'];?></td>
                         <td><?php echo $row['protein'];?></td>

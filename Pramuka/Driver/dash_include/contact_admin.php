@@ -21,19 +21,19 @@
                 <a href="accept_orders.php" class="card" id="card1" style="display: block;">
                     <i class="fas fa-inbox"></i>
                     <div class="container">
-                        <h4><b>Accept Orders</br>3</b ></h4>
+                        <h4><b>Accept Orders</br>0</b ></h4>
                     </div>
                 </a>
                 <a href="delivery_history.php" class="card" id="card2" style="display: block;">
                     <i class="fas fa-list-alt"></i>
                     <div class=" container">
-                        <h4><b>Delivery History</br>3</b></h4>
+                        <h4><b>Delivery History</br>0</b></h4>
                     </div>
                  </a>
                 <a href="earnings.php" class="card" id="card3" style="display: block;">
                     <i class="fas fa-money-check-alt"></i>
                     <div class="container">
-                        <h4><b>Earnings</br>350.00</b></h4>
+                        <h4><b>Earnings</br>0</b></h4>
                     </div>
                 </a>
             </div>

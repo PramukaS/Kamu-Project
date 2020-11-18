@@ -26,7 +26,7 @@
         <?php include('nav.php'); ?>
         <div class="content">
             <div class="container">
-                <a href="" class="card" id="card1" style="display: block;">
+                <a href="inbox.php" class="card" id="card1" style="display: block;">
                     <i class="fa fa-envelope"></i>
                     <div class="container">
                         <h3><b> 12 <br/>Inbox</b></h3><br>

@@ -14,30 +14,31 @@
         <div class="content">
         <div class="card">
                 <div class="food-view">
-                    <h2 style="text-align: left;">Sent Meal Plans </h2><br>
+                    <h2 style="text-align: left;">Inbox</h2><br>
                     <table id="food">
                         <tr>
+                            <th></th>
                             <th>Client Name</th>
-                            <th>Meal plan description</th>
-                            <th colspan="2">Action</th>
+                            <th>Message</th>
+                            <th >Action</th>
                         </tr>
                         <tr>
+                            <td><i class="fa fa-envelope" style="font-size: 20px;"></i></td>
                             <td>Sajana Nakandala</td>
-                            <td>Sajana's meal plan</td>
-                            <td><a href="mealplan_form.php"> <button class="button1">View</button></a></td>
-                            <td> <a href=""> <button class="button1">Delete</button></a></td>
+                            <td>I need a meal plan</td>
+                            <td><a href="mealplan_form.php"> <button class="button1">Read</button></a></td>
                         </tr>
                         <tr>
-                            <td>Nisal Liyanage</td>
-                            <td>Nisal's meal plan</td>
-                            <td><a href="mealplan_form.php"> <button class="button1">View</button></a></td>
-                            <td> <a href=""> <button class="button1">Delete</button></a></td>
+                        <td><i class="fa fa-envelope-open" style="font-size: 20px;"></i></td>
+                            <td>Sajana Nakandala</td>
+                            <td>I need a meal plan</td>
+                            <td><a href="mealplan_form.php"> <button class="button1">Read</button></a></td>
                         </tr>
                         <tr>
-                            <td>Devin De Silva</td>
-                            <td>devin's meal plan</td>
-                            <td><a href="mealplan_form.php"> <button class="button1">View</button></a></td>
-                            <td> <a href=""> <button class="button1">Delete</button></a></td>
+                            <td><i class="fa fa-envelope-open" style="font-size: 20px;"></i></td>
+                            <td>Sajana Nakandala</td>
+                            <td>I need a meal plan</td>
+                            <td><a href="mealplan_form.php"> <button class="button1">Read</button></a></td>
                         </tr>
                     </table>
                 </div>

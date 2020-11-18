@@ -6,7 +6,11 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-image: url('../img/seller_bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: lightyellow;
 }
 
 .seller-dashboard {
@@ -31,8 +35,7 @@ body{
 }
 
 .seller-dashboard .dropbtn {
-    border-radius: 30%;
-    background-color: #d1cfcf;
+    background-color: #ffffff;
     padding: 40px;
     font-size: 16px;
     border: none;
@@ -44,7 +47,6 @@ body{
 }
 
 .seller-dashboard .dropdown-content {
-    border-radius: 20%;
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -53,7 +55,6 @@ body{
 }
 
 .seller-dashboard .dropdown-content a {
-    border-radius: 30%;
     color: black;
     padding: 20px 20px;
     text-decoration: none;
@@ -61,7 +62,7 @@ body{
     flex-direction: row;
 }
 
-.seller-dashboard .dropdown-content a:hover {background-color: rgb(119, 119, 119);}
+.seller-dashboard .dropdown-content a:hover {background-color: #ddd;}
 
 .seller-dashboard .dropdown:hover .dropdown-content {display: block;}
 
@@ -73,7 +74,7 @@ body{
 
 .seller-dashboard .sidebar {
     width: 200px;
-    background-color: #b8bb01;
+    background-color: #4350ff;
     margin: 10px;
     box-shadow: rgba(17, 8, 68, 0.12) 0px 1px 4px 1px;
     float: left;
@@ -101,7 +102,7 @@ body{
 
 .seller-dashboard .sidebar > ul > li {
     padding: 20px 5px;
-    border-bottom: 1px solid #b8bb01;
+    border-bottom: 1px solid gray;
     cursor: pointer;
     letter-spacing: 1px;
     font-weight: bold;
@@ -109,7 +110,7 @@ body{
 
 .seller-dashboard .sidebar ul li ul li a {
     border-radius: 10%;
-    background-color: #e1ec0e;
+    background-color: #86a5be;
     padding: 10px 100px 10px 5px;
     text-align: left;
     color: #000;
@@ -157,8 +158,8 @@ body{
 
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(247, 0, 0, 0.2);
-  border-radius: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 30%;
   transition: 0.3s;
   padding: 40px 90px;
   fill-opacity: 40%;
@@ -169,15 +170,15 @@ body{
 
 #card1 {
   
-    background-color: rgba(185, 126, 17, 0.7);
+    background-color: #9ab637;
 }
 
 #card2 {
-    background-color: rgba(11, 82, 168, 0.7);
+    background-color: #3b6575;
 }
 
 #card3 {
-    background-color: rgba(138, 2, 143, 0.7);
+    background-color: #b35bab;
 }
 
 .card i {

@@ -28,6 +28,6 @@
                 <li><a href="food_view.php">view</a></li>
             </ul>
         </li>
-        <li><a href="">CONTACT ADMINISTRATOR</a></li>
+        <li><a href="contact_admin.php">CONTACT ADMINISTRATOR</a></li>
     </ul>
 </div>

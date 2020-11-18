@@ -13,48 +13,38 @@
 
     <title>View Food Items</title>
     <style>
-        
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 75%;
             }
 
-        #fooditems {
+        #customers {
             font-family: Arial, Helvetica, sans-serif;
             border-collapse: collapse;
-            width: 75%;
+            width: 100%;
         }
 
-        #fooditems td,
-        #fooditems th {
+        #customers td,
+        #customers th {
             border: 1px solid #ddd;
             padding: 8px;
         }
 
-        #fooditems tr:nth-child(even) {
+        #customers tr:nth-child(even) {
             background-color: #f2f2f2;
         }
 
-        #fooditems tr:hover {
+        #customers tr:hover {
             background-color: #ddd;
         }
 
-        #fooditems th {
+        #customers th {
             padding-top: 12px;
             padding-bottom: 12px;
-            text-align: center;
-            background-color: #ac3632;
+            text-align: left;
+            background-color: #4CAF50;
             color: white;
-        }
-        .button{
-            padding-top: 12px;
-            border-collapse: collapse;
-            padding-bottom: 12px;
-            text-align: center;
-            background-color: brown;
-            color: white;
-
         }
     </style>
 </head>
@@ -67,19 +57,19 @@
                 <a href="view_order.php" class="card" id="card1" style="display: block;">
                     <i class="fas fa-sort-amount-up-alt"></i>
                     <div class="container">
-                        <h4><b>Orders</br>3</b></h4>
+                        <h4><b>Orders</br>0</b></h4>
                     </div>
                 </a>
                 <a href="view_food_item.php" class="card" id="card2" style="display: block;">
                     <i class="fas fa-cloud-meatball"></i>
                     <div class=" container">
-                        <h4><b>Food Items</br>12</b></h4>
+                        <h4><b>Food Items</br>0</b></h4>
                     </div>
                 </a>
                 <a href="order_history.php" class="card" id="card3" style="display: block;">
                     <i class="fas fa-history"></i>
                     <div class="container">
-                        <h4><b>Order Histroy</br>22</b></h4>
+                        <h4><b>Order Histroy</br>0</b></h4>
                     </div>
                 </a>
             </div>
@@ -89,38 +79,31 @@
     <div class="content">
         <div table>
 
-            <table id="fooditems">
+            <table id="customers">
                 <tr>
-                    <th>Item ID</th>
-                    <!-- <th>Restaurant ID</th> -->
-                    <th>Item Name</th>
-                    <th>Description</th>
+                    <th>Item_id</th>
+                    <th>Res_id</th>
+                    <th>Item_name</th>
+                    <th>Details</th>
                     <th>Price</th>
-                    <!-- <th>Image</th> -->
+                    <th>Image</th>
                 </tr>
                 <?php
-                require_once('../../connect.php');
-                $query = $con->query("SELECT * FROM fooditem");
+                require_once('../../connection/connect.php');
+                $query = $db->query("SELECT * FROM fooditems");
                 while ($result = $query->fetch_assoc()) {
                 ?>
                     <tr>
                         <td><?php echo $result['Item_id'] ?></td>
-                        <!-- <td><?php echo $result['Res_id'] ?></td> -->
-                        <td><?php echo $result['FName'] ?></td>
-                        <td><?php echo $result['Description'] ?></td>
-                        <td><?php echo $result['price'] ?></td>
-                        <!-- <td><?php echo $result['img'] ?></td> -->
+                        <td><?php echo $result['Res_id'] ?></td>
+                        <td><?php echo $result['Item_name'] ?></td>
+                        <td><?php echo $result['Details'] ?></td>
+                        <td><?php echo $result['Price'] ?></td>
+                        <td><?php echo $result['Image'] ?></td>
                     </tr>
                 <?php }
-                $con->close();
+                $db->close();
                 ?>
-                         <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td> <a href="add_food_item.php"><button type="button" class="button">Add Food Items</button></a></td>
-                    </tr>
-               
             </table>
         </div>
     </div>

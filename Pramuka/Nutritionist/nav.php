@@ -28,6 +28,12 @@
                 <li><a href="food_view.php">view</a></li>
             </ul>
         </li>
+        <li> POST
+            <ul style="display: none;">
+                <li><a href="post_form.php">add</a></li>
+                <li><a href="post_view.php">view</a></li>
+            </ul>
+        </li>
         <li><a href="contact_admin.php">CONTACT ADMINISTRATOR</a></li>
     </ul>
 </div>

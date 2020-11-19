@@ -1,0 +1,117 @@
+body {
+    background-color: #86f183;
+  }
+
+
+
+.bg-img {
+    /* The image used */
+  
+    /* Control the height of the image */
+    min-height: 380px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    display: block;
+  }
+
+
+
+.body{
+    background: #e5e5e5;
+    padding: 0;
+    margin: 0;
+    font-family: 'Signika', sans-serif;
+}
+
+
+
+.box{  
+    top:50% ;
+    left: 50%;
+    
+
+    background: rgb(187, 240, 103);
+    position: absolute;;
+    border-radius: 8px;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    padding: 40px 0px;
+    box-shadow: 0 1px 4px slateblue,0 0 20px slateblue;
+
+
+}
+
+.left{
+    width: 50%;
+    float: left;
+}
+
+.right{
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+.input{
+    border-radius: 20px;
+    box-shadow: 0 2px 20px 0 slateblue;
+    padding: 10px 25px;
+    margin: none;
+}
+
+input[type=storeName],input[type=storeAddress],input[type=firstName],input[type=lastName], input[type=email],input[type=tel],select[id=storeType]{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+button[type=submit]{
+    border-radius: 20px;
+    box-shadow: 0 2px 20px 0 slateblue;
+    padding: 5px 20px;
+    font-size: medium;
+    font-family: cursive;
+    color: cornsilk;
+    background-color: rgb(6, 41, 12);
+
+
+}
+
+h5{
+    text-align: center;
+    display: inline;
+
+}
+
+.icon{
+    color: #9900cc;
+    font-size: 20px;
+}
+
+input[type=button]{
+    padding: 10px 50px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: 14px;
+    outline: none;
+    background-image: linear-gradient(to bottom right,slateblue,#9900cc);
+
+}
+
+.logo1{
+    margin-top: 0%;
+    margin-left: 10%;
+    
+}
+
+.logo2{
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-top: 3%;
+
+}

@@ -40,7 +40,10 @@
                                             value="" placeholder="Active" disabled><br>
                                 <label>Diet Preference</label>
                                     <input class="form-control" type="number"  name="fat" size="50"
-                                            value="" placeholder="Anything" disabled><br>                               
+                                            value="" placeholder="Anything" disabled><br>
+                                <label>Special notes</label>
+                                    <textarea class="form-control" name="message" placeholder="Message" 
+                                        style="display: block; border: 2px solid #ccc; width: 95%; padding: 6px; margin: 5px auto;border-radius: 5px;" disabled></textarea><br>                                
                             </div>
                         </form>
                     </div>
@@ -60,7 +63,7 @@
                                 <label>Dinner</label>
                                     <textarea class="form-control"></textarea><br>
                                 <label>Snacks</label>
-                                    <textarea class="form-control"></textarea><br>                                    
+                                    <textarea class="form-control"></textarea><br><br><br><br><br>                                
                             </div>
                             <input class="button" type="submit" name='submit2' value="Send" size="25">
                             <input class="button" type="reset" value="reset" size="25">

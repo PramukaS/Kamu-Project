@@ -7,7 +7,7 @@
             <div class="dropdown">
                 <button class="dropbtn"><img  src="img/driver_icon.png" alt="user" width="50px"></button>
                 <div class="dropdown-content">
-                    <a href="#">My Profile</a>
+                    <a href="dash_include/my_profile.php">My Profile</a>
                     <a href="../logout.php">Log Out</a>
                 </div>
             </div>

@@ -43,7 +43,7 @@
         #fooditems th {
             padding-top: 12px;
             padding-bottom: 12px;
-            text-align: left;
+            text-align: center;
             background-color: #ac3632;
             color: white;
         }
@@ -51,9 +51,18 @@
             padding-top: 12px;
             border-collapse: collapse;
             padding-bottom: 12px;
-            text-align: left;
-            background-color: #ac3632;
+            text-align: center;
+            background-color: brown;
             color: white;
+
+        }
+        .button1{
+            padding-top: 12px;
+            border-collapse: collapse;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #f2f2f2;
+            color: #ac3632;
 
         }
     </style>
@@ -100,7 +109,7 @@
                 </tr>
                 <?php
                 require_once('../../connect.php');
-                $query = $db->query("SELECT * FROM fooditem");
+                $query = $con->query("SELECT * FROM fooditem");
                 while ($result = $query->fetch_assoc()) {
                 ?>
                     <tr>
@@ -112,13 +121,13 @@
                         <!-- <td><?php echo $result['img'] ?></td> -->
                     </tr>
                 <?php }
-                $db->close();
+                $con->close();
                 ?>
                          <tr>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td> <a href="add_food_item.php"><button type="button" class="button">Add Food Items</button></a></td>
+                        <td> <a href="edit_food_item.php"><button type="button" class="button1">Edit Food Items</button></a></td>
+                        <td><a href="add_food_item.php"><button type="button" class="button">Add Food Items</button></a></td>
                     </tr>
                
             </table>

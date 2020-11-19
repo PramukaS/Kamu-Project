@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/dash.css">
-    <title>Contact Admin</title>
-            <style>
+    <title>Driver Profile</title>
+        <style>
 
         #myDIV {
             width: 100%;
@@ -37,7 +37,7 @@
             background-color: rgb(226, 230, 231);
             margin:10px;
         }
-        /* food form css      */
+   /* food form css      */
         .food-form .form {
             align-self: center;
             width:50%;
@@ -155,10 +155,12 @@
         </style>
 
 
+
+
 </head>
 <body>
     <div class="driver-dashboard">
-        <?php include('nav/contact_admin_nav.php'); ?>
+        <?php include('nav/my_profile_nav.php'); ?>
         <div class="content">
             <div class="container">
                 <a href="accept_orders.php" class="card" id="card1" style="display: block;">
@@ -182,33 +184,61 @@
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="content">  
             <div class="food-form form-container">
-                <h2 style="text-transform: capitalize;text-align:center;">Contact Administrator</h2><br>
+                <h2 style="text-transform: capitalize;text-align:center;">My Profile</h2><br>
                 <form class="form" action="" method="post">
                     <div class="form-group">
-                        <label>Name</label>
-                            <input class="form-control" type="text" name="foodName" size="50"
-                                value="" autocomplete="off" placeholder="Enter Your Name Here" required><br>
-                         <label>Driver ID</label>
-                            <input class="form-control" type="text" name="foodName" size="50"
-                                value="" autocomplete="off" placeholder="Enter Your Driver ID Here" required><br>       
-                        <label>Email</label>
-                            <input class="form-control" type="email" name="calories" size="50"
-                                    value="" placeholder="Enter Your Email" required><br>
-                        <label>Subject</label>
-                            <input class="form-control" type="text"  name="protein" size="50"
-                                    value="" placeholder="Enter Your Subject" required><br>
-                        <label>Message</label>
-                        <textarea class="form-control" name="message" placeholder="Message" 
-                            style="display: block; border: 2px solid #ccc; width: 95%; padding: 6px; margin: 5px auto;border-radius: 5px;" required></textarea><br>                        
+                        <img  src="../img/driver_icon.png" width="100px" style="float:right;" alt="user" width="50px"><br><br><br><br><br>
                     </div>
-                    <input class="button" type="submit" name='submit2' value="submit" size="25">
-                    <input class="button" type="reset" value="reset" size="25">
+                    <div class="form-group">
+                        <label>Username</label><a onclick="myFunction()" href="javascript:void(0);" style="float:right;" value="1">Edit</a> 
+                            <input id = "username" class="form-control" type="text" name="username" size="50"
+                                value="" autocomplete="off" placeholder="Nishantha P " disabled><br>
+
+                                <div id="myDIV"style="display:none;">
+                                        <label>New Username</label>
+                                        <input id = "hidden" class="form-control" type="text" name="username" size="50"
+                                                value="" placeholder="Enter your New Username" required><br>
+                                        <input class="button" type="submit" name='submit2' value="Submit" size="25">
+                                </div>
+                         <label>Driver ID</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;"></a> 
+                            <input class="form-control" type="text" step=0.1 name="name" size="50"
+                                    value="" placeholder="568" disabled><br>       
+
+                        <label>Password</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
+                            <input class="form-control" type="password" name="password" size="3"
+                                    value="" placeholder="**********" disabled><br>
+
+                                    <div id="myDIV1"style="display:none;">
+                                        <label>New Password</label>
+                                            <input id = "hidden" class="form-control" type="password" name="password" size="50"
+                                                value="" placeholder="Enter your New Pssword" required><br>
+                                        <label>Re enter Password</label>
+                                            <input id = "hidden" class="form-control" type="password" name="password" size="50"
+                                                value="" placeholder="Re Enter New Pssword" required><br>
+                                        <input class="button" type="submit" name='submit2' value="Submit" size="25">
+                                    </div>
+
+                                <div id="myDIV"style="display:none;">
+                                        <label>New Username</label>
+                                        <input id = "hidden" class="form-control" type="text" name="username" size="50"
+                                                value="" placeholder="Enter your New Username" disabled><br>
+                                </div>
+
+
+                        <label>License Number</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
+                            <input class="form-control" type="text" step=0.1 name="name" size="50"
+                                    value="" placeholder="986570030" disabled><br>
+                        <label>Contact Number</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
+                            <input class="form-control" type="number" name="cno" size="10"
+                                    value="" placeholder="0773456467"disabled><br>
+                        <label>Upload a copy of License</label><a onclick="myFunction1()" href="javascript:void(0);" style="float:right;">Edit</a> 
+                            <input class="form-control" type="file" name="medical" value=""  ><br>                                         
+                    </div>
                 </form>
             </div>
-
-        </div>    
+    </div>   
 
 
     <?php include('foot.php'); ?>

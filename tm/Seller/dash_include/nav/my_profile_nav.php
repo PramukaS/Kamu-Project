@@ -7,8 +7,8 @@
             <div class="dropdown">
                 <button class="dropbtn"><img  src="../img/seller_icon.png" alt="user" width="50px"></button>
                 <div class="dropdown-content">
-                    <a href="#">My Profile</a>
-                    <a href="#">Log Out</a>
+                    <a href="my_profile.php">My Profile</a>
+                    <a href="../../logout.php">Log Out</a>
                 </div>
             </div>
     </div>
@@ -16,7 +16,7 @@
 <div class="sidebar">
     <ul>
         <li> <a href="../dash.php">DASHBOARD</a></li>
-        <li><m><a href="edit_restaurant_details.php">Edit Restaurant Details</a></m></li>
+        <li><a href="edit_restaurant_details.php">Edit Restaurant Details</m></li>
         <li> Food Menu
         <ul style="display: none;">
                 <li><a href="add_food_item.php">Add Food Items</a></li>

@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color: lightyellow;
+    background-color: rgb(255, 255, 255);
 }
 
 .driver-dashboard {
@@ -110,7 +110,7 @@ body{
 
 .driver-dashboard .sidebar ul li ul li a {
     border-radius: 10%;
-    background-color: #125389;
+    background-color: #878d91;
     padding: 10px 100px 10px 5px;
     text-align: left;
     color: #000;
@@ -120,7 +120,7 @@ body{
 
 .driver-dashboard .sidebar ul li ul li m a {
     border-radius: 10%;
-    background-color: #ac3632;
+    background-color: 878d91;
     padding: 10px 100px 10px 5px;
     text-align: left;
     color: rgb(240, 227, 227);
@@ -129,7 +129,7 @@ body{
 }
 .driver-dashboard .sidebar ul li m a {
     border-radius: 10%;
-    background-color: #ac3632;
+    background-color: 878d91;
     padding: 10px 100px 10px 5px;
     text-align: left;
     color: rgb(240, 227, 227);
